@@ -27,7 +27,7 @@ export default function EventsPage() {
             <li
               key={cat.slug}
               id={cat.slug}
-              className="group imprint-tile flex scroll-mt-36 flex-col overflow-hidden"
+              className="group imprint-tile flex scroll-mt-28 flex-col overflow-hidden"
             >
               <div className="relative aspect-[16/10] bg-fest-field">
                 <Image

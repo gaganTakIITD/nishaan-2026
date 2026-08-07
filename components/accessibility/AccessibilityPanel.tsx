@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useId, useRef } from "react";
 import { useAccessibility } from "./AccessibilityProvider";
 import type { ColorBlindMode } from "./types";
 
@@ -13,12 +13,17 @@ function Toggle({
   checked: boolean;
   onChange: (v: boolean) => void;
 }) {
+  const id = useId();
   return (
-    <label className="flex cursor-pointer items-center justify-between gap-3 rounded-md px-2 py-2 hover:bg-nishaan-mist-soft">
-      <span className="text-sm text-nishaan-ink">{label}</span>
+    <label
+      htmlFor={id}
+      className="flex cursor-pointer items-center justify-between gap-3 rounded-xl px-2 py-2.5 hover:bg-fest-field/70"
+    >
+      <span className="text-sm text-fest-ink">{label}</span>
       <input
+        id={id}
         type="checkbox"
-        className="h-4 w-4 accent-nishaan-leaf"
+        className="h-5 w-5 shrink-0 accent-oae-primary"
         checked={checked}
         onChange={(e) => onChange(e.target.checked)}
       />
@@ -43,15 +48,17 @@ function Slider({
   onChange: (v: number) => void;
   display: string;
 }) {
+  const id = useId();
   return (
-    <label className="block px-2 py-2">
-      <span className="flex items-center justify-between text-sm text-nishaan-ink">
+    <label htmlFor={id} className="block px-2 py-2.5">
+      <span className="flex items-center justify-between text-sm text-fest-ink">
         <span>{label}</span>
-        <span className="tabular-nums text-nishaan-muted">{display}</span>
+        <span className="tabular-nums text-fest-muted">{display}</span>
       </span>
       <input
+        id={id}
         type="range"
-        className="mt-2 w-full accent-nishaan-leaf"
+        className="mt-2 w-full accent-oae-primary"
         min={min}
         max={max}
         step={step}
@@ -76,16 +83,22 @@ export function AccessibilityPanel() {
   const closeRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    if (open) closeRef.current?.focus();
+    if (!open) return;
+    closeRef.current?.focus();
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
   }, [open]);
 
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[80]" role="presentation">
+    <div className="fixed inset-0 z-[110]" role="presentation">
       <button
         type="button"
-        className="absolute inset-0 bg-oae-text/35"
+        className="absolute inset-0 bg-fest-ink/40"
         aria-label="Close accessibility settings"
         onClick={() => setOpen(false)}
       />
@@ -95,35 +108,35 @@ export function AccessibilityPanel() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="a11y-panel-title"
-        className="absolute bottom-0 right-0 flex max-h-[min(82vh,680px)] w-full max-w-md flex-col rounded-t-2xl border border-oae-border bg-white shadow-2xl sm:bottom-24 sm:right-6 sm:rounded-2xl"
+        className="absolute inset-x-0 bottom-0 flex max-h-[min(78vh,640px)] w-full flex-col rounded-t-2xl border border-fest-rule bg-white shadow-2xl sm:inset-x-auto sm:bottom-24 sm:right-6 sm:max-h-[min(82vh,680px)] sm:w-full sm:max-w-md sm:rounded-2xl"
       >
-        <div className="flex items-start justify-between gap-3 border-b border-[var(--border)] px-5 py-4">
+        <div className="flex items-start justify-between gap-3 border-b border-fest-rule px-4 py-3.5 sm:px-5 sm:py-4">
           <div>
             <h2
               id="a11y-panel-title"
-              className="font-display text-xl font-semibold text-nishaan-ink"
+              className="font-display text-lg font-semibold text-fest-ink sm:text-xl"
             >
               Accessibility Settings
             </h2>
-            <p className="mt-1 text-xs text-nishaan-muted">
-              Preferences save on this device. Press Esc to close.
+            <p className="mt-1 text-xs text-fest-muted">
+              Saved on this device. Esc or the button to close.
             </p>
           </div>
           <button
             ref={closeRef}
             type="button"
-            className="rounded-md px-2 py-1 text-sm text-nishaan-ink hover:bg-nishaan-mist"
+            className="rounded-xl px-2.5 py-1.5 text-sm font-medium text-fest-ink hover:bg-fest-field"
             onClick={() => setOpen(false)}
           >
             Close
           </button>
         </div>
 
-        <div className="flex-1 space-y-5 overflow-y-auto px-3 py-4">
+        <div className="flex-1 space-y-4 overflow-y-auto overscroll-contain px-2 py-3 sm:space-y-5 sm:px-3 sm:py-4">
           <section aria-labelledby="a11y-text">
             <h3
               id="a11y-text"
-              className="px-2 text-xs font-semibold uppercase tracking-[0.14em] text-nishaan-leaf"
+              className="px-2 text-xs font-semibold uppercase tracking-[0.14em] text-oae-primary"
             >
               Text Options
             </h3>
@@ -164,7 +177,7 @@ export function AccessibilityPanel() {
           <section aria-labelledby="a11y-vision">
             <h3
               id="a11y-vision"
-              className="px-2 text-xs font-semibold uppercase tracking-[0.14em] text-nishaan-leaf"
+              className="px-2 text-xs font-semibold uppercase tracking-[0.14em] text-oae-primary"
             >
               Visual Options
             </h3>
@@ -203,9 +216,9 @@ export function AccessibilityPanel() {
               onChange={(v) => update("saturation", v)}
             />
             <label className="block px-2 py-2 text-sm">
-              <span className="text-nishaan-ink">Color-blind filter</span>
+              <span className="text-fest-ink">Color-blind filter</span>
               <select
-                className="mt-2 w-full rounded-md border border-[var(--border)] bg-white px-2 py-2 text-nishaan-ink"
+                className="mt-2 w-full rounded-xl border border-fest-rule bg-white px-3 py-2.5 text-fest-ink"
                 value={settings.colorBlind}
                 onChange={(e) =>
                   update("colorBlind", e.target.value as ColorBlindMode)
@@ -222,7 +235,7 @@ export function AccessibilityPanel() {
           <section aria-labelledby="a11y-reading">
             <h3
               id="a11y-reading"
-              className="px-2 text-xs font-semibold uppercase tracking-[0.14em] text-nishaan-leaf"
+              className="px-2 text-xs font-semibold uppercase tracking-[0.14em] text-oae-primary"
             >
               Reading Aids
             </h3>
@@ -241,7 +254,7 @@ export function AccessibilityPanel() {
           <section aria-labelledby="a11y-pointer">
             <h3
               id="a11y-pointer"
-              className="px-2 text-xs font-semibold uppercase tracking-[0.14em] text-nishaan-leaf"
+              className="px-2 text-xs font-semibold uppercase tracking-[0.14em] text-oae-primary"
             >
               Pointer &amp; Focus
             </h3>
@@ -265,7 +278,7 @@ export function AccessibilityPanel() {
           <section aria-labelledby="a11y-motion">
             <h3
               id="a11y-motion"
-              className="px-2 text-xs font-semibold uppercase tracking-[0.14em] text-nishaan-leaf"
+              className="px-2 text-xs font-semibold uppercase tracking-[0.14em] text-oae-primary"
             >
               Motion &amp; Navigation
             </h3>
@@ -281,26 +294,24 @@ export function AccessibilityPanel() {
             />
             <div className="px-2 py-2">
               <div className="mb-2 flex items-center justify-between">
-                <p className="text-sm font-medium text-nishaan-ink">
-                  Page structure
-                </p>
+                <p className="text-sm font-medium text-fest-ink">Page structure</p>
                 <button
                   type="button"
-                  className="text-xs text-nishaan-leaf underline"
+                  className="text-xs text-oae-primary underline"
                   onClick={refreshLandmarks}
                 >
                   Refresh
                 </button>
               </div>
-              <ul className="max-h-40 space-y-1 overflow-y-auto rounded-md border border-[var(--border)] p-2 text-sm">
+              <ul className="max-h-36 space-y-1 overflow-y-auto rounded-xl border border-fest-rule p-2 text-sm">
                 {landmarks.length === 0 ? (
-                  <li className="text-nishaan-muted">No landmarks found</li>
+                  <li className="text-fest-muted">No landmarks found</li>
                 ) : (
                   landmarks.map((item) => (
                     <li key={item.id}>
                       <a
                         href={`#${item.id}`}
-                        className="block rounded px-2 py-1 text-nishaan-ink no-underline hover:bg-nishaan-mist"
+                        className="block rounded-lg px-2 py-1.5 text-fest-ink no-underline hover:bg-fest-field"
                         onClick={() => setOpen(false)}
                       >
                         {item.label}
@@ -313,10 +324,10 @@ export function AccessibilityPanel() {
           </section>
         </div>
 
-        <div className="border-t border-[var(--border)] px-5 py-4">
+        <div className="border-t border-fest-rule px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-5 sm:py-4">
           <button
             type="button"
-            className="w-full rounded-md border border-[var(--border)] bg-nishaan-mist-soft px-4 py-2.5 text-sm font-semibold text-nishaan-leaf-deep hover:bg-nishaan-mist"
+            className="w-full rounded-xl border border-fest-rule bg-fest-field px-4 py-3 text-sm font-semibold text-oae-primary-dark hover:bg-fest-warm-soft/60"
             onClick={reset}
           >
             Reset All Settings

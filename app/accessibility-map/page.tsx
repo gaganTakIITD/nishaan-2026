@@ -35,7 +35,7 @@ export default function AccessibilityMapPage() {
             <li
               key={point.id}
               id={`map-${point.id}`}
-              className="group imprint-tile scroll-mt-36 p-5 sm:p-6"
+              className="group imprint-tile scroll-mt-28 p-5 sm:p-6"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-oae-primary">
                 {point.type}

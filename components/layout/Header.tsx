@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
-import { FestAnnounceBar } from "@/components/layout/FestAnnounceBar";
 import { moreNav, primaryNav, site } from "@/content/site";
 
 function isActive(pathname: string, href: string) {
@@ -62,30 +61,29 @@ export function Header() {
         id="main__navbar"
         className="fixed top-0 z-40 w-full border-b border-fest-rule bg-white/95 text-fest-ink shadow-[0_1px_0_rgba(28,26,23,0.04)] backdrop-blur-md"
       >
-        <FestAnnounceBar />
-        <div className="shell flex h-[4.5rem] items-center justify-between gap-4 lg:h-[5rem]">
-          <div className="flex min-w-0 items-center gap-3 lg:gap-5">
+        <div className="shell flex h-14 items-center justify-between gap-3 sm:h-[4.5rem] sm:gap-4 lg:h-[5rem]">
+          <div className="flex min-w-0 items-center gap-2.5 sm:gap-3 lg:gap-5">
             <Link
               href="/"
-              className="group flex min-w-0 items-center gap-3 no-underline"
+              className="group flex min-w-0 items-center gap-2.5 no-underline sm:gap-3"
               aria-label={`${site.name} home`}
             >
               <Image
                 src="/brand/nishaan-mark.svg"
                 alt=""
-                width={44}
-                height={44}
-                className="h-11 w-11 shrink-0 rounded-full shadow-sm transition-transform duration-300 group-hover:scale-105"
+                width={40}
+                height={40}
+                className="h-9 w-9 shrink-0 rounded-full shadow-sm transition-transform duration-300 group-hover:scale-105 sm:h-11 sm:w-11"
                 priority
               />
               <span className="flex min-w-0 flex-col leading-tight">
-                <span className="truncate font-display text-xl font-semibold tracking-tight text-fest-ink">
+                <span className="truncate font-display text-lg font-semibold tracking-tight text-fest-ink sm:text-xl">
                   {site.name}
-                  <span className="ml-1.5 text-base font-medium text-fest-warm" lang="hi">
+                  <span className="ml-1.5 text-sm font-medium text-fest-warm sm:text-base" lang="hi">
                     {site.nameHi}
                   </span>
                 </span>
-                <span className="truncate text-xs font-medium text-fest-muted">
+                <span className="hidden truncate text-xs font-medium text-fest-muted sm:block">
                   Inclusive cultural fest · IIT Delhi {site.year}
                 </span>
               </span>
@@ -187,7 +185,7 @@ export function Header() {
           <div className="flex items-center gap-2 xl:hidden">
             <Link
               href="/register"
-              className="btn-primary rounded-xl px-3.5 py-2 text-sm no-underline"
+              className="btn-primary rounded-xl px-3 py-2 text-xs no-underline sm:px-3.5 sm:py-2 sm:text-sm"
             >
               Register
             </Link>
@@ -243,7 +241,7 @@ export function Header() {
           </div>
         ) : null}
       </header>
-      <div className="h-[calc(4.5rem+2.5rem)] lg:h-[calc(5rem+2.5rem)]" aria-hidden="true" />
+      <div className="h-14 sm:h-[4.5rem] lg:h-[5rem]" aria-hidden="true" />
     </>
   );
 }

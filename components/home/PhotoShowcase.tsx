@@ -35,27 +35,26 @@ export function PhotoShowcase({
   const rest = showcaseGallery.slice(1);
 
   return (
-    <section className="w-full border-y border-fest-rule bg-fest-paper py-12 md:py-16 lg:py-20">
+    <section className="w-full border-y border-fest-rule bg-fest-paper py-10 sm:py-12 md:py-16 lg:py-20">
       <div className="shell">
-        <div className="flex flex-wrap items-end justify-between gap-4">
+        <div className="flex flex-wrap items-end justify-between gap-3 sm:gap-4">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-fest-warm">
               {eyebrow}
             </p>
-            <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-balance text-fest-ink sm:text-4xl lg:text-5xl">
+            <h2 className="mt-2 font-display text-2xl font-bold tracking-tight text-balance text-fest-ink sm:text-4xl lg:text-5xl">
               {title}
             </h2>
-            <p className="mt-3 text-base leading-relaxed text-pretty text-fest-muted sm:text-lg">
+            <p className="mt-2 text-sm leading-relaxed text-pretty text-fest-muted sm:mt-3 sm:text-lg">
               {description}
             </p>
           </div>
-          <p className="text-sm text-fest-muted">
-            Click any frame to enlarge
+          <p className="hidden text-sm text-fest-muted sm:block">
+            Tap any frame to enlarge
           </p>
         </div>
 
-        {/* Featured + mosaic */}
-        <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-5">
+        <div className="mt-8 grid grid-cols-1 gap-3 sm:mt-10 sm:gap-4 lg:grid-cols-12 lg:gap-5">
           <button
             type="button"
             className="group relative col-span-1 overflow-hidden rounded-2xl border border-fest-rule text-left lg:col-span-7"
@@ -70,18 +69,18 @@ export function PhotoShowcase({
                 sizes="(max-width: 1024px) 100vw, 58vw"
                 priority
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/25 to-transparent p-5 pt-16">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-fest-warm-soft">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/25 to-transparent p-4 pt-14 sm:p-5 sm:pt-16">
+                <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-fest-warm-soft sm:text-xs">
                   Featured
                 </p>
-                <p className="mt-1 font-display text-xl font-semibold text-white sm:text-2xl">
+                <p className="mt-1 font-display text-lg font-semibold text-white sm:text-2xl">
                   {featured.caption}
                 </p>
               </div>
             </div>
           </button>
 
-          <ul className="grid grid-cols-2 gap-4 lg:col-span-5 lg:grid-cols-2 lg:gap-5">
+          <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:col-span-5 lg:grid-cols-2 lg:gap-5">
             {rest.slice(0, 4).map((item) => (
               <li key={item.id}>
                 <button
@@ -98,7 +97,7 @@ export function PhotoShowcase({
                       sizes="(max-width: 1024px) 50vw, 20vw"
                     />
                   </div>
-                  <span className="absolute bottom-2 left-2 rounded-xl bg-white/90 px-2 py-0.5 text-xs font-medium text-fest-ink">
+                  <span className="absolute bottom-2 left-2 rounded-xl bg-white/90 px-2 py-0.5 text-[0.65rem] font-medium text-fest-ink sm:text-xs">
                     {item.caption}
                   </span>
                 </button>
@@ -107,13 +106,12 @@ export function PhotoShowcase({
           </ul>
         </div>
 
-        {/* Second row strip */}
-        <ul className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-5">
+        <ul className="mt-3 grid grid-cols-2 gap-3 sm:mt-4 sm:grid-cols-4 sm:gap-4 lg:gap-5">
           {rest.slice(4).map((item) => (
             <li key={item.id}>
               <button
                 type="button"
-                className="group relative block w-full overflow-hidden rounded-xl border border-fest-rule text-left"
+                className="group relative block w-full overflow-hidden rounded-2xl border border-fest-rule text-left"
                 onClick={() => setActive(item)}
               >
                 <div className="relative aspect-[5/4] bg-fest-field">
@@ -125,7 +123,7 @@ export function PhotoShowcase({
                     sizes="(max-width: 640px) 50vw, 25vw"
                   />
                 </div>
-                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-3 pb-2 pt-8 text-xs font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-2.5 pb-2 pt-8 text-[0.65rem] font-medium text-white opacity-100 sm:px-3 sm:text-xs sm:opacity-0 sm:transition-opacity sm:duration-300 sm:group-hover:opacity-100">
                   {item.caption}
                 </span>
               </button>
@@ -146,27 +144,29 @@ export function PhotoShowcase({
             role="dialog"
             aria-modal="true"
             aria-labelledby={dialogTitleId}
-            className="absolute inset-4 m-auto flex max-h-[90vh] max-w-5xl flex-col overflow-hidden rounded-2xl border border-fest-rule bg-white shadow-2xl sm:inset-8"
+            className="absolute inset-3 m-auto flex max-h-[92vh] max-w-5xl flex-col overflow-hidden rounded-2xl border border-fest-rule bg-white shadow-2xl sm:inset-8"
           >
-            <div className="flex items-center justify-between border-b border-fest-rule px-4 py-3">
-              <div>
+            <div className="flex items-start justify-between gap-3 border-b border-fest-rule px-3 py-3 sm:px-4">
+              <div className="min-w-0">
                 <h3
                   id={dialogTitleId}
-                  className="font-display text-lg font-semibold text-fest-ink"
+                  className="font-display text-base font-semibold text-fest-ink sm:text-lg"
                 >
                   {active.caption}
                 </h3>
-                <p className="text-sm text-fest-muted">{active.alt}</p>
+                <p className="truncate text-xs text-fest-muted sm:text-sm">
+                  {active.alt}
+                </p>
               </div>
               <button
                 type="button"
-                className="rounded-xl border border-fest-rule px-3 py-1.5 text-sm font-medium text-fest-ink hover:bg-fest-field"
+                className="shrink-0 rounded-xl border border-fest-rule px-3 py-1.5 text-sm font-medium text-fest-ink hover:bg-fest-field"
                 onClick={() => setActive(null)}
               >
                 Close
               </button>
             </div>
-            <div className="relative min-h-0 flex-1 bg-fest-paper">
+            <div className="relative min-h-[50vh] flex-1 bg-fest-paper sm:min-h-0">
               <Image
                 src={active.src}
                 alt={active.alt}

@@ -50,6 +50,7 @@
   --a11y-letter-spacing: 0em;
   --a11y-line-height: 1.65;
   --a11y-saturation: 1;
+  --a11y-content-filter: none;
 }
 
 @theme inline {
@@ -110,9 +111,9 @@
     }
   }
 
-  /* Filters on content only — keeps FAB viewport-fixed */
+  /* Filters on content only — keeps FAB/panel viewport-fixed */
   #site-content {
-    filter: saturate(var(--a11y-saturation));
+    filter: var(--a11y-content-filter, none);
   }
 
   h1,
@@ -143,7 +144,7 @@
   margin-inline: auto;
   width: 100%;
   max-width: 92rem;
-  padding-inline: 1.25rem;
+  padding-inline: 1rem;
 }
 @media (min-width: 640px) {
   .shell {
@@ -357,13 +358,27 @@ html[data-a11y-high-contrast="true"] {
   --accent-contrast: #000000;
   --link: #ffff00;
   --border: #ffffff;
-  --fest-paper: #000;
-  --fest-field: #000;
-  --fest-warm-soft: #111;
-  --oae-mint: #000;
-  --oae-bg: #000;
+  --fest-paper: #000000;
+  --fest-ink: #ffffff;
+  --fest-muted: #dddddd;
+  --fest-field: #111111;
+  --fest-warm-soft: #1a1a1a;
+  --fest-rule: #ffffff;
+  --fest-warm: #ffcc00;
+  --oae-primary: #ffffff;
+  --oae-primary-dark: #ffff00;
+  --oae-mint: #000000;
+  --oae-sage: #111111;
+  --oae-bg: #000000;
   --oae-text: #ffffff;
   --oae-muted: #dddddd;
+  --oae-border: #ffffff;
+  --oae-navbar-bg: #000000;
+  --oae-navbar-text: #ffffff;
+  --nishaan-surface: #000000;
+  --nishaan-muted: #dddddd;
+  --nishaan-ink: #ffffff;
+  --nishaan-footer: #000000;
 }
 
 html[data-a11y-dark="true"] {
@@ -379,36 +394,67 @@ html[data-a11y-dark="true"] {
   --fest-field: #1a221c;
   --fest-warm-soft: #2a241c;
   --fest-rule: #2a3228;
+  --fest-warm: #e0a45a;
+  --oae-primary: #6dcb8c;
+  --oae-primary-dark: #9ad9ae;
   --oae-mint: #1a221c;
   --oae-sage: #1a221c;
   --oae-bg: #12140f;
   --oae-text: #f2efe8;
   --oae-muted: #a8b0a4;
+  --oae-border: #2a3228;
   --nishaan-surface: #12140f;
   --nishaan-muted: #a8b0a4;
   --nishaan-ink: #f2efe8;
   --oae-navbar-bg: #1a1e18;
   --oae-navbar-text: #f2efe8;
+  --nishaan-footer: #0c120e;
 }
 
 html[data-a11y-light-bg="true"] {
   --background: #ffffff;
   --foreground: #000000;
   --fest-paper: #ffffff;
+  --fest-field: #f4f4f4;
   --oae-bg: #ffffff;
+  --oae-mint: #f4f4f4;
 }
 
-html[data-a11y-negative="true"] #site-content {
-  filter: invert(1) hue-rotate(180deg) saturate(var(--a11y-saturation));
+/* Remap literal white/paper utilities so dark/high-contrast actually show */
+html[data-a11y-dark="true"] .bg-white,
+html[data-a11y-high-contrast="true"] .bg-white {
+  background-color: var(--fest-field) !important;
 }
+html[data-a11y-dark="true"] .bg-fest-paper,
+html[data-a11y-high-contrast="true"] .bg-fest-paper {
+  background-color: var(--fest-paper) !important;
+}
+html[data-a11y-dark="true"] .bg-fest-field,
+html[data-a11y-high-contrast="true"] .bg-fest-field {
+  background-color: var(--fest-field) !important;
+}
+html[data-a11y-dark="true"] .imprint-tile,
+html[data-a11y-high-contrast="true"] .imprint-tile {
+  background: var(--fest-field);
+  border-color: var(--fest-rule);
+}
+html[data-a11y-dark="true"] header#main__navbar,
+html[data-a11y-high-contrast="true"] header#main__navbar {
+  background-color: color-mix(in srgb, var(--oae-navbar-bg) 95%, transparent) !important;
+  border-color: var(--fest-rule) !important;
+  color: var(--oae-navbar-text) !important;
+}
+html[data-a11y-dark="true"] #accessibility-settings-panel,
+html[data-a11y-high-contrast="true"] #accessibility-settings-panel {
+  background: var(--fest-paper) !important;
+  border-color: var(--fest-rule) !important;
+  color: var(--fest-ink) !important;
+}
+
 html[data-a11y-negative="true"] #site-content img,
 html[data-a11y-negative="true"] #site-content video,
-html[data-a11y-negative="true"] #site-content svg {
+html[data-a11y-negative="true"] #site-content picture {
   filter: invert(1) hue-rotate(180deg);
-}
-
-html[data-a11y-grayscale="true"] #site-content {
-  filter: grayscale(1) saturate(var(--a11y-saturation));
 }
 
 html[data-a11y-underline-links="true"] a {
@@ -431,16 +477,6 @@ html[data-a11y-highlight-focus="true"] :focus-visible {
 html[data-a11y-keyboard-nav="true"] :focus-visible {
   outline: 4px solid var(--oae-primary) !important;
   outline-offset: 4px !important;
-}
-
-html[data-a11y-colorblind="protanopia"] #site-content {
-  filter: url(#cb-protanopia) saturate(var(--a11y-saturation));
-}
-html[data-a11y-colorblind="deuteranopia"] #site-content {
-  filter: url(#cb-deuteranopia) saturate(var(--a11y-saturation));
-}
-html[data-a11y-colorblind="tritanopia"] #site-content {
-  filter: url(#cb-tritanopia) saturate(var(--a11y-saturation));
 }
 
 .a11y-reading-guide {

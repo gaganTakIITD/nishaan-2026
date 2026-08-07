@@ -110,9 +110,9 @@ export function AccessibilityProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (!settings.readingGuide && !settings.readingMask) return;
-    const onMove = (e: MouseEvent) => setGuideY(e.clientY);
-    window.addEventListener("mousemove", onMove, { passive: true });
-    return () => window.removeEventListener("mousemove", onMove);
+    const onMove = (e: PointerEvent) => setGuideY(e.clientY);
+    window.addEventListener("pointermove", onMove, { passive: true });
+    return () => window.removeEventListener("pointermove", onMove);
   }, [settings.readingGuide, settings.readingMask]);
 
   useEffect(() => {

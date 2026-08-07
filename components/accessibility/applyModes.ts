@@ -5,6 +5,18 @@ function setFlag(name: string, on: boolean) {
   else document.documentElement.removeAttribute(name);
 }
 
+/** Single composed filter — avoids conflicting CSS filter rules on #site-content */
+function contentFilter(settings: AccessibilitySettings): string {
+  const parts: string[] = [];
+  if (settings.negativeContrast) parts.push("invert(1) hue-rotate(180deg)");
+  if (settings.grayscale) parts.push("grayscale(1)");
+  if (settings.colorBlind === "protanopia") parts.push("url(#cb-protanopia)");
+  if (settings.colorBlind === "deuteranopia") parts.push("url(#cb-deuteranopia)");
+  if (settings.colorBlind === "tritanopia") parts.push("url(#cb-tritanopia)");
+  if (settings.saturation !== 1) parts.push(`saturate(${settings.saturation})`);
+  return parts.length ? parts.join(" ") : "none";
+}
+
 export function applyAccessibilityModes(settings: AccessibilitySettings) {
   const root = document.documentElement;
 
@@ -15,6 +27,7 @@ export function applyAccessibilityModes(settings: AccessibilitySettings) {
   );
   root.style.setProperty("--a11y-line-height", String(settings.lineHeight));
   root.style.setProperty("--a11y-saturation", String(settings.saturation));
+  root.style.setProperty("--a11y-content-filter", contentFilter(settings));
 
   setFlag("data-a11y-dyslexia", settings.dyslexiaFont);
   setFlag("data-a11y-high-contrast", settings.highContrast);
@@ -55,4 +68,5 @@ export function clearAccessibilityModes() {
   document.documentElement.style.setProperty("--a11y-letter-spacing", "0em");
   document.documentElement.style.setProperty("--a11y-line-height", "1.65");
   document.documentElement.style.setProperty("--a11y-saturation", "1");
+  document.documentElement.style.setProperty("--a11y-content-filter", "none");
 }
