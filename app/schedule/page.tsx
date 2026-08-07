@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ComingSoon, PageHeader, Section } from "@/components/ui/PageChrome";
 import { scheduleSkeleton } from "@/content/events";
 import { site } from "@/content/site";
@@ -17,31 +18,54 @@ export default function SchedulePage() {
         description="A structured outline based on prior editions. Exact times and halls for 2026 will replace this skeleton."
       />
       <Section>
-        <p className="text-sm text-nishaan-muted" role="status">
-          {site.dateLabel} · {site.venue}
-        </p>
-        <ComingSoon label="Timed programme forthcoming" />
-        <ol className="mt-12">
+        <div className="flex flex-wrap items-center gap-4">
+          <p
+            className="rounded-xl border border-fest-rule bg-white px-4 py-1.5 text-sm text-fest-muted"
+            role="status"
+          >
+            {site.dateLabel} · {site.venue}
+          </p>
+          <ComingSoon label="Timed programme forthcoming" />
+        </div>
+
+        <ol className="mt-10 space-y-4">
           {scheduleSkeleton.map((slot, i) => (
             <li
               key={slot.title}
-              className="grid gap-3 border-l-2 border-nishaan-ink py-8 pl-8 sm:grid-cols-[10rem_1fr] sm:gap-12"
+              className="imprint-tile grid gap-3 border-l-4 border-l-fest-warm p-5 transition-colors sm:grid-cols-[11rem_1fr] sm:gap-10 sm:p-6"
             >
-              <p className="font-display text-sm font-semibold uppercase tracking-[0.14em] text-nishaan-gold">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-oae-primary">
                 {slot.time}
               </p>
               <div>
-                <h2 className="font-display text-2xl font-semibold text-nishaan-ink sm:text-3xl">
-                  <span className="mr-3 text-nishaan-muted tabular-nums">
+                <h2 className="font-display text-2xl font-semibold tracking-tight text-balance text-fest-ink sm:text-3xl">
+                  <span className="mr-3 tabular-nums text-fest-muted">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   {slot.title}
                 </h2>
-                <p className="mt-2 max-w-xl text-nishaan-muted">{slot.detail}</p>
+                <p className="mt-3 max-w-xl text-base leading-relaxed text-pretty text-fest-muted">
+                  {slot.detail}
+                </p>
               </div>
             </li>
           ))}
         </ol>
+
+        <div className="mt-12 flex flex-wrap gap-3">
+          <Link
+            href="/register"
+            className="btn-primary rounded-xl px-5 py-2.5 text-sm no-underline"
+          >
+            Register interest
+          </Link>
+          <Link
+            href="/contact"
+            className="btn-secondary rounded-xl px-5 py-2.5 text-sm no-underline"
+          >
+            Ask about timing
+          </Link>
+        </div>
       </Section>
     </main>
   );

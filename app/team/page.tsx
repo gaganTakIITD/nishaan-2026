@@ -16,42 +16,52 @@ export default function TeamPage() {
         description="Faculty leadership from OAE / ODI. Student coordinator roles will be announced for 2026."
       />
       <Section>
-        <h2 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-nishaan-leaf-deep">
+        <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-oae-primary">
           Faculty
         </h2>
-        <ul className="mt-8 divide-y divide-[var(--border)]">
+        <ul className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
           {facultyTeam.map((person) => (
-            <li
-              key={person.name}
-              className="grid gap-2 py-8 sm:grid-cols-[1fr_1.2fr] sm:gap-10"
-            >
-              <div>
-                <h3 className="font-display text-2xl font-semibold text-nishaan-ink">
-                  {person.name}
-                </h3>
-                <p className="mt-1 text-sm font-medium text-nishaan-leaf-deep">
-                  {person.role}
-                </p>
+            <li key={person.name} className="group imprint-tile p-6 sm:p-8">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-oae-mint font-display text-lg font-semibold text-oae-primary transition-all duration-300 group-hover:bg-oae-primary group-hover:text-white">
+                {person.name
+                  .split(" ")
+                  .filter((p) => p.startsWith("Prof") === false)
+                  .map((p) => p[0])
+                  .join("")
+                  .slice(0, 2)}
               </div>
-              <p className="text-nishaan-muted sm:pt-1">{person.note}</p>
+              <h3 className="mt-5 font-display text-2xl font-semibold tracking-tight text-balance text-oae-text transition-colors duration-300 group-hover:text-oae-primary">
+                {person.name}
+              </h3>
+              <p className="mt-2 text-sm font-semibold text-oae-primary">
+                {person.role}
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-oae-muted">
+                {person.note}
+              </p>
             </li>
           ))}
         </ul>
 
-        <h2 className="mt-16 font-display text-sm font-semibold uppercase tracking-[0.18em] text-nishaan-leaf-deep">
-          Student team
-        </h2>
-        <ComingSoon label="Names and photographs forthcoming" />
-        <ul className="mt-8 divide-y divide-[var(--border)]">
+        <div className="mt-20 flex flex-wrap items-center justify-between gap-4">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-oae-primary">
+            Student team
+          </h2>
+          <ComingSoon label="Names and photographs forthcoming" />
+        </div>
+
+        <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {studentTeamPlaceholders.map((person) => (
             <li
               key={person.role}
-              className="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:justify-between"
+              className="group imprint-tile flex flex-col gap-2 p-5 sm:p-6"
             >
-              <h3 className="font-display text-xl font-semibold text-nishaan-ink">
-                {person.role.split("—")[0]?.trim() || person.role}
+              <h3 className="font-display text-lg font-semibold tracking-tight text-oae-text transition-colors duration-300 group-hover:text-oae-primary">
+                {person.name}
               </h3>
-              <p className="text-sm text-nishaan-muted">{person.name}</p>
+              <p className="text-sm leading-relaxed text-oae-muted">
+                {person.role}
+              </p>
             </li>
           ))}
         </ul>

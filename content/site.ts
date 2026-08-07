@@ -3,16 +3,43 @@ export const site = {
   nameHi: "निशान",
   year: 2026,
   editionLabel: "IIT Delhi · Office of Accessible Education",
-  tagline: "A mark left on the stage",
+  tagline: "A mark of belonging",
   headline: "Where talent takes its mark",
   supporting:
-    "An inclusive cultural celebration for students with disabilities.",
+    "An inclusive cultural celebration for students with disabilities, organised by the Office of Accessible Education at IIT Delhi.",
   dateLabel: "Programme date to be announced",
   venue: "IIT Delhi campus",
   oaeUrl: "https://oae.iitd.ac.in/",
   odiUrl: "https://odi.iitd.ac.in/",
   iitdUrl: "https://home.iitd.ac.in/",
 } as const;
+
+export const heroSlides = [
+  {
+    title: "NISHAAN 2026",
+    location: "Indian Institute of Technology Delhi",
+    description:
+      "IIT Delhi's inclusive cultural fest for students with disabilities — six categories, one welcoming stage.",
+    image: "/media/hero-stage.svg",
+    cta: { href: "/events", label: "Explore events" },
+  },
+  {
+    title: "Celebrate ability. Amplify voices.",
+    location: "Music · Dance · Drama · Art · Photography · Wordsmith",
+    description:
+      "Perform, exhibit, or write — open to students from IIT Delhi and colleges across Delhi.",
+    image: "/media/chapter-events.svg",
+    cta: { href: "/schedule", label: "View schedule" },
+  },
+  {
+    title: "Organised by OAE",
+    location: "Office of Accessible Education · IIT Delhi",
+    description:
+      "Accessibility support at every step — from registration notes to campus navigation.",
+    image: "/media/chapter-about.svg",
+    cta: { href: "/about", label: "About NISHAAN" },
+  },
+] as const;
 
 /** Slim primary nav — everything else under More */
 export const primaryNav = [
@@ -72,7 +99,11 @@ export const contacts = {
 } as const;
 
 export const history = [
-  { edition: 1, year: 2023, notes: "First organised — a new imprint on campus culture" },
+  {
+    edition: 1,
+    year: 2023,
+    notes: "First organised — a new imprint on campus culture",
+  },
   {
     edition: 2,
     year: 2024,
@@ -90,32 +121,32 @@ export const history = [
   },
 ] as const;
 
-/** Atmospheric media — swap paths when OAE supplies official photos */
+/** Atmospheric media — real photos from prior editions */
 export const media = {
   hero: {
-    src: "/media/hero-stage.svg",
-    alt: "Atmospheric stage lights — placeholder visual for NISHAAN 2026",
+    src: "/media/hero/stage.jpg",
+    alt: "Inclusive stage performance at NISHAAN — dancers and performers together",
   },
   past: [
     {
-      src: "/media/past/2025-01.svg",
-      alt: "Photo placeholder — NISHAAN 2025",
+      src: "/media/past/2025-01.jpg",
+      alt: "Performers on stage during NISHAAN",
       caption: "On stage",
     },
     {
-      src: "/media/past/2025-02.svg",
-      alt: "Photo placeholder — NISHAAN 2025",
+      src: "/media/past/2025-02.jpg",
+      alt: "Students celebrating during NISHAAN",
       caption: "In the room",
     },
     {
-      src: "/media/past/2024-01.svg",
-      alt: "Photo placeholder — NISHAAN 2024",
+      src: "/media/past/2024-01.jpg",
+      alt: "Cultural showcase at NISHAAN",
       caption: "In the frame",
     },
   ],
   chapter: {
-    about: "/media/chapter-about.svg",
-    events: "/media/chapter-events.svg",
-    vision: "/media/chapter-vision.svg",
+    about: "/media/past/about-side.jpg",
+    events: "/media/past/2024-01.jpg",
+    vision: "/media/past/2025-01.jpg",
   },
 } as const;

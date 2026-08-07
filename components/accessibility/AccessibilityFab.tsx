@@ -2,14 +2,15 @@
 
 import { useAccessibility } from "./AccessibilityProvider";
 
-/** Mid-right floating a11y control — same pattern as OAE */
+/** Fixed bottom-right — stays on screen while scrolling, every route */
 export function AccessibilityFab() {
   const { open, setOpen } = useAccessibility();
 
   return (
     <button
       type="button"
-      className="fixed right-4 top-1/2 z-[70] flex h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full bg-oae-primary text-white shadow-lg ring-4 ring-white transition hover:scale-105 hover:bg-[var(--oae-primary-dark)] focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-oae-primary"
+      className="fixed bottom-4 right-4 z-[100] flex h-14 w-14 items-center justify-center rounded-full bg-oae-primary text-white shadow-[0_8px_24px_rgba(27,122,61,0.35)] ring-4 ring-white transition-transform duration-300 ease-out hover:scale-105 hover:bg-oae-primary-dark focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-oae-primary sm:bottom-6 sm:right-6"
+      style={{ position: "fixed" }}
       aria-haspopup="dialog"
       aria-expanded={open}
       aria-controls="accessibility-settings-panel"
@@ -17,7 +18,12 @@ export function AccessibilityFab() {
       title="Open Accessibility Settings"
     >
       <span className="sr-only">Open Accessibility Settings</span>
-      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-7 w-7" fill="currentColor">
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        className="h-7 w-7"
+        fill="currentColor"
+      >
         <path d="M12 2a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm-1 6h2c1.7 0 3 1.3 3 3v3h-2v8h-2v-8H8v-3c0-1.7 1.3-3 3-3Z" />
       </svg>
     </button>

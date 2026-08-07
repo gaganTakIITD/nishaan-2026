@@ -13,21 +13,27 @@ export function ContactForm() {
   return (
     <form
       onSubmit={onSubmit}
-      className="border border-[var(--border)] bg-[var(--background)] p-6 sm:p-8"
+      className="imprint-tile h-fit bg-white p-6 sm:p-8"
       noValidate={false}
       aria-describedby="contact-form-note"
     >
-      <h2 className="font-display text-xl font-semibold text-nishaan-ink">
+      <h2 className="font-display text-2xl font-semibold tracking-tight text-balance text-oae-text">
         Send a message
       </h2>
-      <p id="contact-form-note" className="mt-2 text-sm text-nishaan-muted">
+      <p
+        id="contact-form-note"
+        className="mt-2 text-sm leading-relaxed text-oae-muted"
+      >
         Placeholder form — submissions are not sent to a server yet. Prefer email
         for urgent queries.
       </p>
 
-      <div className="mt-6 space-y-4">
+      <div className="mt-8 space-y-5">
         <div>
-          <label htmlFor="contact-name" className="block text-sm font-medium">
+          <label
+            htmlFor="contact-name"
+            className="block text-sm font-medium text-oae-text"
+          >
             Name
           </label>
           <input
@@ -35,11 +41,14 @@ export function ContactForm() {
             name="name"
             required
             autoComplete="name"
-            className="mt-1 w-full rounded-md border border-[var(--border)] bg-white px-3 py-2 text-nishaan-ink"
+            className="field-input mt-1.5"
           />
         </div>
         <div>
-          <label htmlFor="contact-email" className="block text-sm font-medium">
+          <label
+            htmlFor="contact-email"
+            className="block text-sm font-medium text-oae-text"
+          >
             Email
           </label>
           <input
@@ -48,11 +57,14 @@ export function ContactForm() {
             type="email"
             required
             autoComplete="email"
-            className="mt-1 w-full rounded-md border border-[var(--border)] bg-white px-3 py-2 text-nishaan-ink"
+            className="field-input mt-1.5"
           />
         </div>
         <div>
-          <label htmlFor="contact-message" className="block text-sm font-medium">
+          <label
+            htmlFor="contact-message"
+            className="block text-sm font-medium text-oae-text"
+          >
             Message
           </label>
           <textarea
@@ -60,20 +72,23 @@ export function ContactForm() {
             name="message"
             required
             rows={5}
-            className="mt-1 w-full rounded-md border border-[var(--border)] bg-white px-3 py-2 text-nishaan-ink"
+            className="field-input mt-1.5"
           />
         </div>
       </div>
 
       <button
         type="submit"
-        className="mt-6 rounded-md bg-nishaan-leaf px-5 py-2.5 text-sm font-semibold text-white hover:bg-nishaan-leaf-deep"
+        className="btn-primary mt-8 rounded-xl px-6 py-3 text-sm"
       >
         Submit
       </button>
 
       {status === "sent" ? (
-        <p className="mt-4 text-sm text-nishaan-leaf-deep" role="status">
+        <p
+          className="mt-5 rounded-xl border border-oae-border bg-oae-mint/50 px-4 py-3 text-sm leading-relaxed text-oae-primary-dark"
+          role="status"
+        >
           Thanks — this demo form does not transmit data yet. Please email OAE
           directly for now.
         </p>

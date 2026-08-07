@@ -3,37 +3,49 @@ export const eventCategories = [
     slug: "music",
     title: "Music",
     description:
-      "Dynamic and graceful performances celebrating vocal and instrumental talent.",
+      "Vocal and instrumental performances — solo or group — celebrating rhythm, melody, and expression.",
+    format: "Stage performance",
+    action: "Register for Music",
   },
   {
     slug: "dance",
     title: "Dance",
     description:
-      "Solo and group performances — inclusive choreography that moves audiences.",
+      "Inclusive choreography for solo and group acts that move the audience with energy and grace.",
+    format: "Stage performance",
+    action: "Register for Dance",
   },
   {
     slug: "drama",
     title: "Drama",
     description:
-      "Stage storytelling and theatre that centre lived experience and imagination.",
+      "Theatre and storytelling that centre lived experience, imagination, and powerful stage presence.",
+    format: "Stage performance",
+    action: "Register for Drama",
   },
   {
     slug: "painting",
     title: "Painting & Drawing",
     description:
-      "Visual art showcases recognising artistic excellence on canvas and paper.",
+      "Visual art on canvas and paper — originality, technique, and artistic voice are celebrated.",
+    format: "On-site / display",
+    action: "Register for Art",
   },
   {
     slug: "photography",
     title: "Photography",
     description:
-      "Frames that capture campus, culture, and the spirit of inclusion.",
+      "Still frames that capture campus life, culture, and the spirit of inclusion at NISHAAN.",
+    format: "Submission / display",
+    action: "Register for Photos",
   },
   {
     slug: "wordsmith",
     title: "Wordsmith",
     description:
-      "Poetry and essay — words that engage, provoke, and belong on stage.",
+      "Poetry and essay — words that engage, provoke, and belong on stage or in print.",
+    format: "Reading / written",
+    action: "Register for Wordsmith",
   },
 ] as const;
 

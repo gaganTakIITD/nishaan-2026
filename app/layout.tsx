@@ -19,12 +19,30 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gagantakiitd.github.io/nishaan-2026"),
   title: {
     default: "NISHAAN 2026 · IIT Delhi",
     template: "%s · NISHAAN 2026",
   },
   description:
     "NISHAAN 2026 — an inclusive cultural celebration for students with disabilities, organised by the Office of Accessible Education at IIT Delhi.",
+  openGraph: {
+    title: "NISHAAN 2026 · IIT Delhi",
+    description:
+      "Inclusive cultural fest for students with disabilities — Office of Accessible Education, IIT Delhi.",
+    type: "website",
+    locale: "en_IN",
+    siteName: "NISHAAN 2026",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NISHAAN 2026 · IIT Delhi",
+    description:
+      "Inclusive cultural fest for students with disabilities — OAE, IIT Delhi.",
+  },
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

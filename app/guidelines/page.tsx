@@ -50,26 +50,49 @@ export default function GuidelinesPage() {
       />
       <Section>
         <ComingSoon label="Official rulebook PDF forthcoming" />
-        <div className="mt-10 space-y-10">
-          {checklist.map((block) => (
-            <section key={block.title} aria-labelledby={`g-${block.title}`}>
-              <h2
-                id={`g-${block.title}`}
-                className="font-display text-2xl font-semibold text-nishaan-ink"
-              >
-                {block.title}
-              </h2>
-              <ul className="mt-4 list-disc space-y-2 pl-5 text-nishaan-muted">
+
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
+          {checklist.map((block, i) => (
+            <section
+              key={block.title}
+              aria-labelledby={`g-${block.title}`}
+              className="group imprint-tile p-6 sm:p-8"
+            >
+              <div className="flex items-baseline justify-between gap-3">
+                <h2
+                  id={`g-${block.title}`}
+                  className="font-display text-2xl font-semibold tracking-tight text-balance text-oae-text transition-colors duration-300 group-hover:text-oae-primary"
+                >
+                  {block.title}
+                </h2>
+                <span className="font-display text-sm tabular-nums text-oae-muted">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
+              <ul className="mt-5 space-y-3">
                 {block.items.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li
+                    key={item}
+                    className="flex gap-3 text-sm leading-relaxed text-oae-muted"
+                  >
+                    <span
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-oae-primary"
+                      aria-hidden="true"
+                    />
+                    <span className="text-pretty">{item}</span>
+                  </li>
                 ))}
               </ul>
             </section>
           ))}
         </div>
-        <p className="mt-10 text-sm">
+
+        <p className="mt-12 text-base leading-relaxed text-oae-muted">
           Questions?{" "}
-          <Link href="/contact" className="font-semibold text-nishaan-leaf-deep">
+          <Link
+            href="/contact"
+            className="font-semibold text-oae-primary underline decoration-oae-primary/30 underline-offset-4 transition-all duration-300 hover:decoration-oae-primary"
+          >
             Contact OAE
           </Link>
         </p>

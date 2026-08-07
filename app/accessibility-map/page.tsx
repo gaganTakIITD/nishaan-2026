@@ -19,27 +19,31 @@ export default function AccessibilityMapPage() {
       />
       <Section>
         <ComingSoon label="Official map graphic forthcoming" />
-        <div className="mt-8">
+        <div className="mt-10">
           <CampusMap />
         </div>
 
-        <h2 className="mt-16 font-display text-sm font-semibold uppercase tracking-[0.18em] text-nishaan-leaf-deep">
+        <h2 className="mt-20 text-xs font-semibold uppercase tracking-[0.18em] text-oae-primary">
           Text alternative — access points
         </h2>
-        <p className="mt-3 max-w-2xl text-sm text-nishaan-muted">
+        <p className="mt-3 max-w-2xl text-base leading-relaxed text-pretty text-oae-muted">
           Equivalent information for screen reader users and anyone who prefers a
           list over the diagram.
         </p>
-        <ul className="mt-8 divide-y divide-[var(--border)]">
+        <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
           {mapPoints.map((point) => (
-            <li key={point.id} id={`map-${point.id}`} className="scroll-mt-28 py-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-nishaan-gold">
+            <li
+              key={point.id}
+              id={`map-${point.id}`}
+              className="group imprint-tile scroll-mt-36 p-5 sm:p-6"
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-oae-primary">
                 {point.type}
               </p>
-              <h3 className="mt-1 font-display text-xl font-semibold text-nishaan-ink">
+              <h3 className="mt-2 font-display text-xl font-semibold tracking-tight text-balance text-oae-text transition-colors duration-300 group-hover:text-oae-primary">
                 {point.name}
               </h3>
-              <p className="mt-2 max-w-2xl text-sm text-nishaan-muted">
+              <p className="mt-2 text-sm leading-relaxed text-pretty text-oae-muted">
                 {point.detail}
               </p>
             </li>

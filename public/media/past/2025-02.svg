@@ -1,7 +1,14 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
-  <rect width="1200" height="900" fill="#bffebe"/>
-  <rect x="40" y="40" width="1120" height="820" fill="#ffffff" stroke="#228b22" stroke-width="2" stroke-dasharray="10 8"/>
-  <text x="600" y="400" text-anchor="middle" fill="#1a6b1a" font-family="system-ui,sans-serif" font-size="40" font-weight="700">NISHAAN 2025</text>
-  <text x="600" y="460" text-anchor="middle" fill="#5f6b5f" font-family="system-ui,sans-serif" font-size="22">Official photo placeholder</text>
-  <text x="600" y="510" text-anchor="middle" fill="#5f6b5f" font-family="system-ui,sans-serif" font-size="18">Replace with event photograph</text>
+  <defs>
+    <linearGradient id="g" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cad8ca"/>
+      <stop offset="100%" stop-color="#bffebe"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <circle cx="220" cy="200" r="140" fill="#ffffff" opacity="0.35"/>
+  <circle cx="980" cy="680" r="180" fill="#228b22" opacity="0.1"/>
+  <rect x="280" y="240" width="640" height="400" rx="20" fill="#ffffff" opacity="0.45"/>
+  <path d="M340 520 H860" stroke="#228b22" stroke-width="4" opacity="0.18"/>
+  <path d="M340 560 H700" stroke="#228b22" stroke-width="4" opacity="0.12"/>
 </svg>

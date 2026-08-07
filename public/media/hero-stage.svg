@@ -1,12 +1,13 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#bffebe"/>
+      <stop offset="0%" stop-color="#f7faf7"/>
+      <stop offset="45%" stop-color="#bffebe"/>
       <stop offset="100%" stop-color="#cad8ca"/>
     </linearGradient>
   </defs>
   <rect width="1920" height="1080" fill="url(#g)"/>
-  <circle cx="1400" cy="300" r="280" fill="#228b22" opacity="0.15"/>
-  <text x="120" y="520" fill="#1a6b1a" font-family="system-ui,sans-serif" font-size="72" font-weight="700">NISHAAN 2026</text>
-  <text x="120" y="590" fill="#212121" font-family="system-ui,sans-serif" font-size="32">IIT Delhi · Office of Accessible Education</text>
+  <circle cx="1500" cy="280" r="300" fill="#228b22" opacity="0.10"/>
+  <circle cx="280" cy="820" r="240" fill="#228b22" opacity="0.08"/>
+  <path d="M80 780 C360 560, 620 420, 960 380 S1560 340, 1860 240" fill="none" stroke="#228b22" stroke-width="12" stroke-linecap="round" opacity="0.18"/>
 </svg>

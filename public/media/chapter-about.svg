@@ -1,4 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
-  <rect width="1600" height="900" fill="#bffebe"/>
-  <text x="800" y="450" text-anchor="middle" fill="#1a6b1a" font-family="system-ui,sans-serif" font-size="48" font-weight="600">About NISHAAN</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="">
+  <defs>
+    <linearGradient id="aboutWash" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#bffebe"/>
+      <stop offset="100%" stop-color="#cad8ca"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#aboutWash)"/>
+  <circle cx="1280" cy="220" r="220" fill="#228b22" opacity="0.10"/>
+  <circle cx="260" cy="780" r="180" fill="#228b22" opacity="0.08"/>
+  <path d="M120 720 C360 560, 520 420, 760 380 S1180 340, 1480 260" fill="none" stroke="#228b22" stroke-width="10" stroke-linecap="round" opacity="0.22"/>
+  <path d="M180 240 C420 300, 620 480, 780 640 S1100 860, 1420 900" fill="none" stroke="#1a6b1a" stroke-width="5" stroke-linecap="round" opacity="0.16"/>
+  <rect x="140" y="160" width="180" height="12" rx="6" fill="#228b22" opacity="0.28"/>
+  <rect x="140" y="196" width="110" height="12" rx="6" fill="#228b22" opacity="0.16"/>
 </svg>

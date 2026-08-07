@@ -1,5 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
-  <rect width="1600" height="900" fill="#cad8ca"/>
-  <rect x="80" y="80" width="1440" height="740" fill="#bffebe" opacity="0.5"/>
-  <text x="800" y="460" text-anchor="middle" fill="#1a6b1a" font-family="system-ui,sans-serif" font-size="48" font-weight="600">Events &amp; activities</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="">
+  <defs>
+    <linearGradient id="eventsWash" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cad8ca"/>
+      <stop offset="50%" stop-color="#bffebe"/>
+      <stop offset="100%" stop-color="#f7faf7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#eventsWash)"/>
+  <rect x="180" y="200" width="340" height="220" rx="28" fill="#ffffff" opacity="0.72"/>
+  <rect x="580" y="280" width="340" height="220" rx="28" fill="#ffffff" opacity="0.62"/>
+  <rect x="980" y="200" width="340" height="220" rx="28" fill="#ffffff" opacity="0.72"/>
+  <circle cx="350" cy="310" r="28" fill="#228b22" opacity="0.35"/>
+  <circle cx="750" cy="390" r="28" fill="#228b22" opacity="0.28"/>
+  <circle cx="1150" cy="310" r="28" fill="#228b22" opacity="0.35"/>
+  <path d="M200 720 H1400" stroke="#228b22" stroke-width="3" opacity="0.15"/>
+  <path d="M200 780 H1100" stroke="#228b22" stroke-width="3" opacity="0.10"/>
 </svg>

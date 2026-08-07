@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ComingSoon, PageHeader, Section } from "@/components/ui/PageChrome";
 import { eventCategories } from "@/content/events";
 import { RegisterForm } from "./RegisterForm";
@@ -19,26 +20,32 @@ export default function RegisterPage() {
       <Section>
         <ComingSoon label="Official registration link forthcoming" />
 
-        <div className="mt-12 grid gap-14 lg:grid-cols-12">
+        <div className="mt-14 grid gap-14 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-4">
-            <h2 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-nishaan-leaf-deep">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-oae-primary">
               Categories
             </h2>
             <ul className="mt-6 space-y-3">
               {eventCategories.map((c, i) => (
-                <li key={c.slug} className="flex gap-3 text-nishaan-ink">
-                  <span className="font-display text-nishaan-gold tabular-nums">
+                <li
+                  key={c.slug}
+                  className="imprint-tile flex items-center gap-3 px-4 py-3 text-fest-ink"
+                >
+                  <span className="font-display text-sm tabular-nums text-oae-primary">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  {c.title}
+                  <span className="font-medium">{c.title}</span>
                 </li>
               ))}
             </ul>
-            <p className="mt-8 text-sm text-nishaan-muted">
+            <p className="mt-8 text-sm leading-relaxed text-fest-muted">
               Review{" "}
-              <a href="/guidelines" className="font-medium text-nishaan-leaf-deep">
+              <Link
+                href="/guidelines"
+                className="font-semibold text-oae-primary-dark underline decoration-oae-primary/30 underline-offset-4"
+              >
                 participation guidelines
-              </a>{" "}
+              </Link>{" "}
               before registering. Mention access needs so OAE can plan support.
             </p>
           </div>

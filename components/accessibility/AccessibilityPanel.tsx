@@ -82,10 +82,10 @@ export function AccessibilityPanel() {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[70]" role="presentation">
+    <div className="fixed inset-0 z-[80]" role="presentation">
       <button
         type="button"
-        className="absolute inset-0 bg-nishaan-ink/40"
+        className="absolute inset-0 bg-oae-text/35"
         aria-label="Close accessibility settings"
         onClick={() => setOpen(false)}
       />
@@ -95,7 +95,7 @@ export function AccessibilityPanel() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="a11y-panel-title"
-        className="absolute right-0 top-1/2 flex max-h-[min(85vh,680px)] w-full max-w-md -translate-y-1/2 flex-col border border-[var(--border)] bg-white shadow-2xl sm:right-20"
+        className="absolute bottom-0 right-0 flex max-h-[min(82vh,680px)] w-full max-w-md flex-col rounded-t-2xl border border-oae-border bg-white shadow-2xl sm:bottom-24 sm:right-6 sm:rounded-2xl"
       >
         <div className="flex items-start justify-between gap-3 border-b border-[var(--border)] px-5 py-4">
           <div>

@@ -4,8 +4,28 @@ import { media } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Our Vision",
-  description: "NISHAAN's inclusion manifesto — a mark of belonging for every student.",
+  description:
+    "NISHAAN's inclusion manifesto — a mark of belonging for every student.",
 };
+
+const pillars = [
+  {
+    title: "Belonging",
+    body: "Culture and campus life that welcome every body and every mind.",
+  },
+  {
+    title: "Visibility",
+    body: "A public celebration of talent that is too often sidelined.",
+  },
+  {
+    title: "Partnership",
+    body: "Inter-college solidarity across Delhi’s disability community.",
+  },
+  {
+    title: "Continuity",
+    body: "Cultural inclusion (NISHAAN) paired with sports inclusion (SANGAM).",
+  },
+] as const;
 
 export default function VisionPage() {
   return (
@@ -20,38 +40,28 @@ export default function VisionPage() {
         }}
       />
       <Section>
-        <blockquote className="max-w-4xl font-display text-3xl leading-[1.25] text-nishaan-ink sm:text-4xl md:text-5xl">
-          “Accessible higher education is a fundamental right of PwDs. At IIT
-          Delhi, we are committed to providing an inclusive environment…”
+        <blockquote className="imprint-tile max-w-4xl border-l-4 border-l-oae-primary p-8 sm:p-10">
+          <p className="font-display text-2xl leading-relaxed text-pretty text-oae-text sm:text-3xl md:text-4xl md:leading-snug">
+            “Accessible higher education is a fundamental right of PwDs. At IIT
+            Delhi, we are committed to providing an inclusive environment…”
+          </p>
+          <footer className="mt-6 text-sm leading-relaxed text-oae-muted">
+            — Prof. Vikram Singh, Faculty Advisor / Faculty In-charge (PwBD)
+          </footer>
         </blockquote>
-        <p className="mt-6 text-sm text-nishaan-muted">
-          — Prof. Vikram Singh, Faculty Advisor / Faculty In-charge (PwBD)
-        </p>
 
-        <div className="mt-20 grid gap-12 border-t border-[var(--border)] pt-16 sm:grid-cols-2">
-          {[
-            {
-              title: "Belonging",
-              body: "Culture and campus life that welcome every body and every mind.",
-            },
-            {
-              title: "Visibility",
-              body: "A public celebration of talent that is too often sidelined.",
-            },
-            {
-              title: "Partnership",
-              body: "Inter-college solidarity across Delhi’s disability community.",
-            },
-            {
-              title: "Continuity",
-              body: "Cultural inclusion (NISHAAN) paired with sports inclusion (SANGAM).",
-            },
-          ].map((item) => (
-            <div key={item.title}>
-              <h2 className="font-display text-2xl font-semibold text-nishaan-ink">
+        <div className="mt-20 grid grid-cols-1 gap-6 border-t border-oae-border pt-16 sm:grid-cols-2 lg:gap-8">
+          {pillars.map((item) => (
+            <div
+              key={item.title}
+              className="group imprint-tile p-6 transition-all duration-300 sm:p-8"
+            >
+              <h2 className="font-display text-2xl font-semibold tracking-tight text-balance text-oae-text transition-colors duration-300 group-hover:text-oae-primary">
                 {item.title}
               </h2>
-              <p className="mt-3 text-nishaan-muted">{item.body}</p>
+              <p className="mt-3 text-base leading-relaxed text-pretty text-oae-muted">
+                {item.body}
+              </p>
             </div>
           ))}
         </div>

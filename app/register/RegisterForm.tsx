@@ -15,20 +15,23 @@ export function RegisterForm() {
     <form
       id="register-form"
       onSubmit={onSubmit}
-      className="border border-[var(--border)] bg-[var(--background)] p-6 sm:p-8"
+      className="imprint-tile bg-white p-6 sm:p-8"
       aria-describedby="register-note"
     >
-      <h2 className="font-display text-xl font-semibold text-nishaan-ink">
+      <h2 className="font-display text-2xl font-semibold tracking-tight text-balance text-oae-text">
         Interest form
       </h2>
-      <p id="register-note" className="mt-2 text-sm text-nishaan-muted">
+      <p id="register-note" className="mt-2 text-sm leading-relaxed text-oae-muted">
         Demo shell only — does not submit to a backend. Official registration URL
         will be linked here.
       </p>
 
-      <div className="mt-6 space-y-4">
+      <div className="mt-8 space-y-5">
         <div>
-          <label htmlFor="reg-name" className="block text-sm font-medium">
+          <label
+            htmlFor="reg-name"
+            className="block text-sm font-medium text-oae-text"
+          >
             Full name
           </label>
           <input
@@ -36,11 +39,14 @@ export function RegisterForm() {
             name="name"
             required
             autoComplete="name"
-            className="mt-1 w-full rounded-md border border-[var(--border)] px-3 py-2"
+            className="field-input mt-1.5"
           />
         </div>
         <div>
-          <label htmlFor="reg-email" className="block text-sm font-medium">
+          <label
+            htmlFor="reg-email"
+            className="block text-sm font-medium text-oae-text"
+          >
             Email
           </label>
           <input
@@ -49,33 +55,38 @@ export function RegisterForm() {
             type="email"
             required
             autoComplete="email"
-            className="mt-1 w-full rounded-md border border-[var(--border)] px-3 py-2"
+            className="field-input mt-1.5"
           />
         </div>
         <div>
-          <label htmlFor="reg-college" className="block text-sm font-medium">
+          <label
+            htmlFor="reg-college"
+            className="block text-sm font-medium text-oae-text"
+          >
             College / institution
           </label>
           <input
             id="reg-college"
             name="college"
             required
-            className="mt-1 w-full rounded-md border border-[var(--border)] px-3 py-2"
+            className="field-input mt-1.5"
           />
         </div>
         <fieldset>
-          <legend className="text-sm font-medium">Category interest</legend>
-          <div className="mt-2 grid gap-2 sm:grid-cols-2">
+          <legend className="text-sm font-medium text-oae-text">
+            Category interest
+          </legend>
+          <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
             {eventCategories.map((c) => (
               <label
                 key={c.slug}
-                className="flex items-center gap-2 rounded-md border border-[var(--border)] px-3 py-2 text-sm"
+                className="flex cursor-pointer items-center gap-2.5 rounded-xl border border-oae-border bg-oae-bg/60 px-3.5 py-2.5 text-sm text-oae-text transition-all duration-300 ease-out hover:border-oae-primary/30 hover:bg-oae-mint/40 has-[:checked]:border-oae-primary/40 has-[:checked]:bg-oae-mint/60"
               >
                 <input
                   type="checkbox"
                   name="categories"
                   value={c.slug}
-                  className="accent-nishaan-leaf"
+                  className="accent-oae-primary"
                 />
                 {c.title}
               </label>
@@ -83,14 +94,18 @@ export function RegisterForm() {
           </div>
         </fieldset>
         <div>
-          <label htmlFor="reg-access" className="block text-sm font-medium">
-            Access requirements (optional)
+          <label
+            htmlFor="reg-access"
+            className="block text-sm font-medium text-oae-text"
+          >
+            Access requirements{" "}
+            <span className="font-normal text-oae-muted">(optional)</span>
           </label>
           <textarea
             id="reg-access"
             name="access"
             rows={3}
-            className="mt-1 w-full rounded-md border border-[var(--border)] px-3 py-2"
+            className="field-input mt-1.5"
             placeholder="e.g. wheelchair access, interpreter, large print…"
           />
         </div>
@@ -98,15 +113,18 @@ export function RegisterForm() {
 
       <button
         type="submit"
-        className="mt-6 rounded-md bg-oae-primary px-5 py-2.5 text-sm font-semibold text-white hover:bg-[var(--oae-primary-dark)]"
+        className="btn-primary mt-8 rounded-xl px-6 py-3 text-sm"
       >
         Submit interest
       </button>
 
       {status === "sent" ? (
-        <p className="mt-4 text-sm text-nishaan-leaf-deep" role="status">
-          Interest recorded locally in this demo. Watch this page for the official
-          registration link.
+        <p
+          className="mt-5 rounded-xl border border-oae-border bg-oae-mint/50 px-4 py-3 text-sm leading-relaxed text-oae-primary-dark"
+          role="status"
+        >
+          Interest recorded locally in this demo. Watch this page for the
+          official registration link.
         </p>
       ) : null}
     </form>
