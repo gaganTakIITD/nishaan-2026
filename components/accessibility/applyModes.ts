@@ -40,6 +40,8 @@ export function applyAccessibilityModes(settings: AccessibilitySettings) {
   setFlag("data-a11y-highlight-focus", settings.highlightFocus);
   setFlag("data-a11y-pause-animations", settings.pauseAnimations);
   setFlag("data-a11y-keyboard-nav", settings.keyboardNav);
+  setFlag("data-a11y-line-height", Math.abs(settings.lineHeight - 1.65) > 0.001);
+  setFlag("data-a11y-letter-spacing", settings.letterSpacing > 0.001);
 
   if (settings.colorBlind === "none") {
     root.removeAttribute("data-a11y-colorblind");
@@ -62,6 +64,8 @@ export function clearAccessibilityModes() {
     "data-a11y-pause-animations",
     "data-a11y-keyboard-nav",
     "data-a11y-colorblind",
+    "data-a11y-line-height",
+    "data-a11y-letter-spacing",
   ];
   attrs.forEach((a) => document.documentElement.removeAttribute(a));
   document.documentElement.style.setProperty("--a11y-font-size", "1");

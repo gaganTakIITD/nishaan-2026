@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* A11y root text scale — must beat Tailwind preflight; rem utilities follow html font-size */
+html {
+  font-size: calc(16px * var(--a11y-font-size, 1));
+  letter-spacing: var(--a11y-letter-spacing, 0em);
+  line-height: var(--a11y-line-height, 1.65);
+}
+
 /* Cultural Imprint — inclusive arts festival, light paper canvas */
 :root {
   --fest-paper: #faf8f4;
@@ -98,9 +105,9 @@
     background: var(--background);
     color: var(--foreground);
     font-family: var(--font-dm-sans), system-ui, sans-serif;
-    font-size: calc(1rem * var(--a11y-font-size));
-    letter-spacing: var(--a11y-letter-spacing);
-    line-height: var(--a11y-line-height);
+    font-size: 1rem;
+    letter-spacing: inherit;
+    line-height: inherit;
     min-height: 100vh;
     /* room for fixed a11y FAB so content isn’t covered on mobile */
     padding-bottom: 5.5rem;
@@ -137,6 +144,46 @@
     background: color-mix(in srgb, var(--fest-warm) 28%, white);
     color: var(--fest-ink);
   }
+}
+
+/* Beat Tailwind leading-* / tracking when user moves a11y sliders */
+html[data-a11y-line-height="true"] #site-content :where(
+  p,
+  li,
+  dd,
+  td,
+  th,
+  label,
+  input,
+  textarea,
+  button,
+  a,
+  span,
+  [class*="leading-"]
+) {
+  line-height: var(--a11y-line-height) !important;
+}
+html[data-a11y-line-height="true"] #site-content :where(h1, h2, h3, h4) {
+  line-height: 1.2 !important;
+}
+
+html[data-a11y-letter-spacing="true"] #site-content :where(
+  p,
+  li,
+  dd,
+  td,
+  th,
+  label,
+  a,
+  span,
+  button,
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display
+) {
+  letter-spacing: var(--a11y-letter-spacing) !important;
 }
 
 /* Full-bleed page fit */
