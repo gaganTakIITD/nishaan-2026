@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2820"/>
+      <stop offset="100%" stop-color="#0a100e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#b)"/>
+  <rect x="0" y="520" width="1200" height="280" fill="#0a100e" opacity="0.5"/>
+  <g fill="#f3f1ec">
+    <ellipse cx="280" cy="560" rx="36" ry="50" opacity="0.1"/>
+    <ellipse cx="360" cy="575" rx="30" ry="42" opacity="0.09"/>
+    <ellipse cx="440" cy="555" rx="34" ry="48" opacity="0.11"/>
+    <ellipse cx="520" cy="580" rx="28" ry="40" opacity="0.08"/>
+    <ellipse cx="600" cy="550" rx="38" ry="52" opacity="0.12"/>
+    <ellipse cx="680" cy="570" rx="30" ry="44" opacity="0.09"/>
+    <ellipse cx="760" cy="560" rx="34" ry="46" opacity="0.1"/>
+    <ellipse cx="840" cy="585" rx="26" ry="38" opacity="0.08"/>
+    <ellipse cx="920" cy="555" rx="36" ry="50" opacity="0.1"/>
+  </g>
+  <rect x="200" y="180" width="800" height="4" fill="#e25a45" opacity="0.45"/>
+  <rect x="320" y="200" width="560" height="2" fill="#c9a86a" opacity="0.3"/>
+</svg>
