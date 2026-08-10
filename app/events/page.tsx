@@ -91,7 +91,7 @@ export default function EventsPage() {
             </li>
             <li className="rounded-xl bg-white/80 p-4">
               <p className="font-display text-sm text-fest-warm">03</p>
-              <p className="mt-1 font-semibold text-fest-ink">Register interest</p>
+              <p className="mt-1 font-semibold text-fest-ink">Register Interest</p>
               <p className="mt-1 text-sm text-fest-muted">
                 Submit the interest form until the official link is published.
               </p>
@@ -102,7 +102,7 @@ export default function EventsPage() {
               href="/register"
               className="btn-primary rounded-xl px-5 py-2.5 text-sm no-underline"
             >
-              Register interest
+              Register Interest
             </Link>
             <ComingSoon label="2026 category rules forthcoming" />
           </div>

@@ -114,24 +114,24 @@ export function HomeSections() {
             {[
               {
                 step: "01",
-                title: "Pick a category",
+                title: "Pick a Category",
                 body: "Music, Dance, Drama, Art, Photography, or Wordsmith — choose where you want to shine.",
                 href: "/events",
-                cta: "Browse events",
+                cta: "Browse Events",
               },
               {
                 step: "02",
-                title: "Read guidelines",
+                title: "Read Guidelines",
                 body: "Check eligibility and note any accessibility support you need on campus.",
                 href: "/guidelines",
-                cta: "Open guidelines",
+                cta: "Open Guidelines",
               },
               {
                 step: "03",
-                title: "Register interest",
+                title: "Register Interest",
                 body: "Submit the interest form until the official registration link is published.",
                 href: "/register",
-                cta: "Register now",
+                cta: "Register Now",
               },
             ].map((item) => (
               <li key={item.step} className="imprint-tile flex flex-col p-5 sm:p-6">
@@ -418,19 +418,19 @@ export function HomeSections() {
               href="/register"
               className="btn-primary rounded-xl px-5 py-2.5 text-sm no-underline"
             >
-              Register interest
+              Register Interest
             </Link>
             <Link
               href="/schedule"
               className="btn-secondary rounded-xl px-5 py-2.5 text-sm no-underline"
             >
-              View schedule
+              View Schedule
             </Link>
             <Link
               href="/accessibility-map"
               className="rounded-xl border border-fest-rule bg-white px-5 py-2.5 text-sm font-semibold text-fest-ink no-underline transition-all duration-300 hover:border-oae-primary/40"
             >
-              Campus map
+              Campus Map
             </Link>
           </div>
         </div>

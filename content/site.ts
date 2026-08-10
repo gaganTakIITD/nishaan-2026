@@ -21,7 +21,7 @@ export const heroSlides = [
     description:
       "IIT Delhi's inclusive cultural fest for students with disabilities — six categories, one welcoming stage.",
     image: "/media/hero-stage.svg",
-    cta: { href: "/events", label: "Explore events" },
+    cta: { href: "/events", label: "Explore Events" },
   },
   {
     title: "Celebrate ability. Amplify voices.",
@@ -29,7 +29,7 @@ export const heroSlides = [
     description:
       "Perform, exhibit, or write — open to students from IIT Delhi and colleges across Delhi.",
     image: "/media/chapter-events.svg",
-    cta: { href: "/schedule", label: "View schedule" },
+    cta: { href: "/schedule", label: "View Schedule" },
   },
   {
     title: "Organised by OAE",

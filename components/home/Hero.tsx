@@ -72,13 +72,13 @@ export function Hero() {
               href="/register"
               className="btn-primary rounded-xl px-5 py-2.5 text-sm no-underline sm:px-6 sm:py-3"
             >
-              Register interest
+              Register Interest
             </Link>
             <Link
               href="/events"
               className="btn-secondary rounded-xl px-5 py-2.5 text-sm no-underline sm:px-6 sm:py-3"
             >
-              Browse events
+              Browse Events
             </Link>
           </div>
 
