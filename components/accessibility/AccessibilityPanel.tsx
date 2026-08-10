@@ -95,7 +95,7 @@ export function AccessibilityPanel() {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[110]" role="presentation">
+    <div className="fixed inset-0 z-[9991]" role="presentation">
       <button
         type="button"
         className="absolute inset-0 bg-fest-ink/40"
