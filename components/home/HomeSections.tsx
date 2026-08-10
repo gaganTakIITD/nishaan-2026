@@ -430,7 +430,7 @@ export function HomeSections() {
               href="/accessibility-map"
               className="rounded-xl border border-fest-rule bg-white px-5 py-2.5 text-sm font-semibold text-fest-ink no-underline transition-all duration-300 hover:border-oae-primary/40"
             >
-              Campus map
+              Campus Map
             </Link>
           </div>
         </div>
