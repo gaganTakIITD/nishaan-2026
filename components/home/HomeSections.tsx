@@ -444,8 +444,8 @@ export function HomeSections() {
           <Image
             src="/brand/oae-logo.png"
             alt="Office of Accessible Education, IIT Delhi"
-            width={160}
-            height={160}
+            width={908}
+            height={855}
             className="mt-5 h-28 w-auto object-contain"
           />
           <p className="mt-4 font-display text-2xl font-semibold tracking-tight text-fest-ink">

@@ -26,8 +26,8 @@ export function Footer() {
             <Image
               src="/brand/oae-logo-footer.png"
               alt="Office of Accessible Education, IIT Delhi"
-              width={112}
-              height={112}
+              width={140}
+              height={132}
               className="h-16 w-auto rounded-full bg-white/95 object-contain p-1"
             />
           </div>

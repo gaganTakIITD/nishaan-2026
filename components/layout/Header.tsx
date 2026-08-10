@@ -99,9 +99,9 @@ export function Header() {
               <Image
                 src="/brand/oae-logo-header.png"
                 alt="Office of Accessible Education, IIT Delhi"
-                width={120}
-                height={48}
-                className="h-9 w-auto object-contain"
+                width={160}
+                height={151}
+                className="h-10 w-auto object-contain sm:h-11"
                 priority
               />
             </a>
@@ -209,9 +209,9 @@ export function Header() {
                 <Image
                   src="/brand/oae-logo-header.png"
                   alt="Office of Accessible Education, IIT Delhi"
-                  width={100}
-                  height={40}
-                  className="h-10 w-auto object-contain"
+                  width={160}
+                  height={151}
+                  className="h-11 w-auto object-contain"
                 />
                 <p className="text-xs leading-relaxed text-fest-muted">
                   Organised by the Office of Accessible Education
