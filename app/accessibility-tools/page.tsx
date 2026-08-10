@@ -47,7 +47,7 @@ export default function AccessibilityToolsPage() {
     <main id="main-content">
       <PageHeader
         eyebrow="Accessibility"
-        title="Accessibility tools & statement"
+        title="Accessibility Tools & Statement"
         description="NISHAAN ships a first-party accessibility toolbar inspired by OAE’s in-house settings panel — not a third-party SaaS widget."
       />
       <Section>
@@ -62,7 +62,7 @@ export default function AccessibilityToolsPage() {
                   01
                 </span>
                 <span>
-                  Activate the floating person-icon button labelled{" "}
+                  Activate the floating accessibility button labelled{" "}
                   <strong className="font-semibold text-oae-text">
                     Open Accessibility Settings
                   </strong>{" "}

@@ -18,7 +18,7 @@ export function ContactForm() {
       aria-describedby="contact-form-note"
     >
       <h2 className="font-display text-2xl font-semibold tracking-tight text-balance text-oae-text">
-        Send a message
+        Send a Message
       </h2>
       <p
         id="contact-form-note"

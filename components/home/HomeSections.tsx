@@ -18,7 +18,7 @@ export function HomeSections() {
         <div className="shell grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-12">
           <div className="lg:col-span-7">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-fest-warm">
-              About the fest
+              About the Fest
             </p>
             <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-balance text-fest-ink sm:text-4xl lg:text-5xl">
               A mark of belonging
@@ -40,13 +40,13 @@ export function HomeSections() {
                 href="/about"
                 className="btn-primary inline-flex rounded-xl px-5 py-2.5 text-sm no-underline"
               >
-                Learn more
+                Learn More
               </Link>
               <Link
                 href="/vision"
                 className="btn-secondary inline-flex rounded-xl px-5 py-2.5 text-sm no-underline"
               >
-                Our vision
+                Our Vision
               </Link>
             </div>
           </div>
@@ -114,24 +114,24 @@ export function HomeSections() {
             {[
               {
                 step: "01",
-                title: "Pick a category",
+                title: "Pick a Category",
                 body: "Music, Dance, Drama, Art, Photography, or Wordsmith — choose where you want to shine.",
                 href: "/events",
-                cta: "Browse events",
+                cta: "Browse Events",
               },
               {
                 step: "02",
-                title: "Read guidelines",
+                title: "Read Guidelines",
                 body: "Check eligibility and note any accessibility support you need on campus.",
                 href: "/guidelines",
-                cta: "Open guidelines",
+                cta: "Open Guidelines",
               },
               {
                 step: "03",
-                title: "Register interest",
+                title: "Register Interest",
                 body: "Submit the interest form until the official registration link is published.",
                 href: "/register",
-                cta: "Register now",
+                cta: "Register Now",
               },
             ].map((item) => (
               <li key={item.step} className="imprint-tile flex flex-col p-5 sm:p-6">
@@ -164,7 +164,7 @@ export function HomeSections() {
                 Programme
               </p>
               <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-balance text-fest-ink sm:text-4xl">
-                Cultural categories
+                Cultural Categories
               </h2>
               <p className="mt-2 text-base leading-relaxed text-fest-muted">
                 Six showcases for NISHAAN {site.year} — pick a format, then
@@ -175,7 +175,7 @@ export function HomeSections() {
               href="/events"
               className="text-sm font-semibold text-oae-primary underline decoration-oae-primary/30 underline-offset-4 transition-colors hover:decoration-oae-primary"
             >
-              View all events →
+              View All Events →
             </Link>
           </div>
 
@@ -246,7 +246,7 @@ export function HomeSections() {
                 href="/about#past-photos"
                 className="mt-6 inline-flex rounded-xl bg-white px-5 py-2.5 text-sm font-semibold text-fest-ink no-underline transition-opacity hover:opacity-90"
               >
-                See past moments →
+                See Past Moments →
               </Link>
             </div>
           </div>
@@ -333,7 +333,7 @@ export function HomeSections() {
                 Archive
               </p>
               <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-balance text-fest-ink sm:text-4xl">
-                Past editions
+                Past Editions
               </h2>
               <p className="mt-2 text-base leading-relaxed text-pretty text-fest-muted">
                 A look back at NISHAAN on campus — stages, stories, and shared
@@ -418,19 +418,19 @@ export function HomeSections() {
               href="/register"
               className="btn-primary rounded-xl px-5 py-2.5 text-sm no-underline"
             >
-              Register interest
+              Register Interest
             </Link>
             <Link
               href="/schedule"
               className="btn-secondary rounded-xl px-5 py-2.5 text-sm no-underline"
             >
-              View schedule
+              View Schedule
             </Link>
             <Link
               href="/accessibility-map"
               className="rounded-xl border border-fest-rule bg-white px-5 py-2.5 text-sm font-semibold text-fest-ink no-underline transition-all duration-300 hover:border-oae-primary/40"
             >
-              Campus map
+              Campus Map
             </Link>
           </div>
         </div>
@@ -441,27 +441,48 @@ export function HomeSections() {
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-fest-muted">
             Organised by
           </p>
-          <Image
-            src="/brand/oae-logo.png"
-            alt="Office of Accessible Education, IIT Delhi"
-            width={160}
-            height={160}
-            className="mt-5 h-28 w-auto object-contain"
-          />
-          <p className="mt-4 font-display text-2xl font-semibold tracking-tight text-fest-ink">
-            Office of Accessible Education
-          </p>
-          <p className="mx-auto mt-2 max-w-lg text-sm leading-relaxed text-fest-muted">
-            Under the Office of Diversity &amp; Inclusion, IIT Delhi
-          </p>
-          <a
-            href={site.oaeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex text-oae-primary underline decoration-oae-primary/30 underline-offset-4 transition-colors hover:decoration-oae-primary"
-          >
-            Visit oae.iitd.ac.in
-          </a>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+            <a
+              href={site.oaeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center no-underline"
+            >
+              <Image
+                src="/brand/oae-logo.png"
+                alt="Office of Accessible Education, IIT Delhi"
+                width={160}
+                height={160}
+                className="h-28 w-auto object-contain"
+              />
+              <p className="mt-3 font-display text-lg font-semibold tracking-tight text-fest-ink sm:text-xl">
+                Office of Accessible Education
+              </p>
+              <span className="mt-1 text-sm text-oae-primary underline decoration-oae-primary/30 underline-offset-4">
+                oae.iitd.ac.in
+              </span>
+            </a>
+            <a
+              href={site.odiUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center no-underline"
+            >
+              <Image
+                src="/brand/odi-logo.png"
+                alt="Office of Diversity and Inclusion, IIT Delhi"
+                width={220}
+                height={102}
+                className="h-20 w-auto object-contain sm:h-24"
+              />
+              <p className="mt-3 font-display text-lg font-semibold tracking-tight text-fest-ink sm:text-xl">
+                Office of Diversity &amp; Inclusion
+              </p>
+              <span className="mt-1 text-sm text-oae-primary underline decoration-oae-primary/30 underline-offset-4">
+                odi.iitd.ac.in
+              </span>
+            </a>
+          </div>
         </div>
       </section>
     </div>
