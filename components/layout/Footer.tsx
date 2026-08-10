@@ -23,13 +23,38 @@ export function Footer() {
                 {site.nameHi}
               </p>
             </div>
-            <Image
-              src="/brand/oae-logo-footer.png"
-              alt="Office of Accessible Education, IIT Delhi"
-              width={112}
-              height={112}
-              className="h-16 w-auto rounded-full bg-white/95 object-contain p-1"
-            />
+          </div>
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            <a
+              href={site.oaeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-white/95 p-1"
+              title="Office of Accessible Education"
+            >
+              <Image
+                src="/brand/oae-logo-footer.png"
+                alt="Office of Accessible Education, IIT Delhi"
+                width={112}
+                height={112}
+                className="h-14 w-auto rounded-full object-contain"
+              />
+            </a>
+            <a
+              href={site.odiUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl bg-white/10 px-3 py-2"
+              title="Office of Diversity & Inclusion"
+            >
+              <Image
+                src="/brand/odi-logo-footer.png"
+                alt="Office of Diversity and Inclusion, IIT Delhi"
+                width={160}
+                height={74}
+                className="h-12 w-auto object-contain"
+              />
+            </a>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/80">
             Inclusive cultural celebration for students with disabilities at IIT
@@ -45,12 +70,21 @@ export function Footer() {
             >
               Office of Accessible Education
             </a>
+            {" · "}
+            <a
+              href={site.odiUrl}
+              className="font-medium text-white underline decoration-white/35 underline-offset-4 transition-colors hover:decoration-white"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Office of Diversity &amp; Inclusion
+            </a>
           </p>
         </div>
 
         <div>
           <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-white/55">
-            Quick links
+            Quick Links
           </h2>
           <ul className="mt-5 grid grid-cols-2 gap-x-4 gap-y-2.5 text-sm">
             {footerNav.map((item) => (
@@ -89,6 +123,15 @@ export function Footer() {
               >
                 oae.iitd.ac.in
               </a>
+              {" · "}
+              <a
+                href={site.odiUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-fest-warm-soft"
+              >
+                odi.iitd.ac.in
+              </a>
             </li>
           </ul>
         </div>
@@ -96,7 +139,8 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <p className="shell py-4 text-xs leading-relaxed text-white/50">
-          © {site.year} NISHAAN · Office of Accessible Education · IIT Delhi
+          © {site.year} NISHAAN · Office of Accessible Education · Office of
+          Diversity &amp; Inclusion · IIT Delhi
         </p>
       </div>
     </footer>

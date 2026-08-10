@@ -57,7 +57,7 @@ export default function SchedulePage() {
             href="/register"
             className="btn-primary rounded-xl px-5 py-2.5 text-sm no-underline"
           >
-            Register interest
+            Register Interest
           </Link>
           <Link
             href="/contact"

@@ -13,7 +13,7 @@ export default function PartnersPage() {
     <main id="main-content">
       <PageHeader
         eyebrow="Partners"
-        title="Partners & sponsors"
+        title="Partners & Sponsors"
         description="Institutional anchors for NISHAAN. Sponsor marks will appear here when confirmed."
       />
       <Section>

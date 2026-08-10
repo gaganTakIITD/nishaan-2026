@@ -6,7 +6,7 @@ import { RegisterForm } from "./RegisterForm";
 
 export const metadata: Metadata = {
   title: "Register",
-  description: "Register interest for NISHAAN 2026 — official form link coming soon.",
+  description: "Register Interest for NISHAAN 2026 — official form link coming soon.",
 };
 
 export default function RegisterPage() {

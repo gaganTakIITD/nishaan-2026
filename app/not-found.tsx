@@ -25,7 +25,7 @@ export default function NotFound() {
             href="/events"
             className="btn-secondary rounded-xl px-5 py-2.5 text-sm no-underline"
           >
-            Browse events
+            Browse Events
           </Link>
           <Link
             href="/contact"

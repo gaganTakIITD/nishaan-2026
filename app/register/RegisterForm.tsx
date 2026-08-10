@@ -19,7 +19,7 @@ export function RegisterForm() {
       aria-describedby="register-note"
     >
       <h2 className="font-display text-2xl font-semibold tracking-tight text-balance text-oae-text">
-        Interest form
+        Interest Form
       </h2>
       <p id="register-note" className="mt-2 text-sm leading-relaxed text-oae-muted">
         Demo shell only — does not submit to a backend. Official registration URL
@@ -32,7 +32,7 @@ export function RegisterForm() {
             htmlFor="reg-name"
             className="block text-sm font-medium text-oae-text"
           >
-            Full name
+            Full Name
           </label>
           <input
             id="reg-name"
@@ -63,7 +63,7 @@ export function RegisterForm() {
             htmlFor="reg-college"
             className="block text-sm font-medium text-oae-text"
           >
-            College / institution
+            College / Institution
           </label>
           <input
             id="reg-college"
@@ -74,7 +74,7 @@ export function RegisterForm() {
         </div>
         <fieldset>
           <legend className="text-sm font-medium text-oae-text">
-            Category interest
+            Category Interest
           </legend>
           <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
             {eventCategories.map((c) => (
@@ -98,8 +98,8 @@ export function RegisterForm() {
             htmlFor="reg-access"
             className="block text-sm font-medium text-oae-text"
           >
-            Access requirements{" "}
-            <span className="font-normal text-oae-muted">(optional)</span>
+            Access Requirements{" "}
+            <span className="font-normal text-oae-muted">(Optional)</span>
           </label>
           <textarea
             id="reg-access"
@@ -115,7 +115,7 @@ export function RegisterForm() {
         type="submit"
         className="btn-primary mt-8 rounded-xl px-6 py-3 text-sm"
       >
-        Submit interest
+        Submit Interest
       </button>
 
       {status === "sent" ? (
