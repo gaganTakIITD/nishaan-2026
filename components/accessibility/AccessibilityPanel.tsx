@@ -114,8 +114,24 @@ export function AccessibilityPanel() {
           <div>
             <h2
               id="a11y-panel-title"
-              className="font-display text-lg font-semibold text-fest-ink sm:text-xl"
+              className="flex items-center gap-2 font-display text-lg font-semibold text-fest-ink sm:text-xl"
             >
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                className="h-5 w-5 shrink-0 text-oae-primary"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="16" cy="4" r="1" />
+                <path d="m18 19 1-7-6 1" />
+                <path d="m5 8 3-3 5.5 3-2.36 3.5" />
+                <path d="M4.24 14.5a5 5 0 0 0 6.88 6" />
+                <path d="M13.76 17.5a5 5 0 0 0-6.88-6" />
+              </svg>
               Accessibility Settings
             </h2>
             <p className="mt-1 text-xs text-fest-muted">
