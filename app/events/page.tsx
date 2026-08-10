@@ -77,14 +77,14 @@ export default function EventsPage() {
           <ol className="mt-4 grid gap-3 sm:grid-cols-3">
             <li className="rounded-xl bg-white/80 p-4">
               <p className="font-display text-sm text-fest-warm">01</p>
-              <p className="mt-1 font-semibold text-fest-ink">Choose a category</p>
+              <p className="mt-1 font-semibold text-fest-ink">Choose a Category</p>
               <p className="mt-1 text-sm text-fest-muted">
                 Pick Music, Dance, Drama, Art, Photography, or Wordsmith.
               </p>
             </li>
             <li className="rounded-xl bg-white/80 p-4">
               <p className="font-display text-sm text-fest-warm">02</p>
-              <p className="mt-1 font-semibold text-fest-ink">Read guidelines</p>
+              <p className="mt-1 font-semibold text-fest-ink">Read Guidelines</p>
               <p className="mt-1 text-sm text-fest-muted">
                 Check eligibility and note any access support you need.
               </p>

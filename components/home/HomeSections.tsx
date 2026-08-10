@@ -40,7 +40,7 @@ export function HomeSections() {
                 href="/about"
                 className="btn-primary inline-flex rounded-xl px-5 py-2.5 text-sm no-underline"
               >
-                Learn more
+                Learn More
               </Link>
               <Link
                 href="/vision"
@@ -175,7 +175,7 @@ export function HomeSections() {
               href="/events"
               className="text-sm font-semibold text-oae-primary underline decoration-oae-primary/30 underline-offset-4 transition-colors hover:decoration-oae-primary"
             >
-              View all events →
+              View All Events →
             </Link>
           </div>
 
