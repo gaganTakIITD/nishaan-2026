@@ -21,11 +21,6 @@ export const oaeTeam = [
     image: "/brand/team/anoushka-augustine.png",
   },
   {
-    name: "Sashank Sekhar Sabat",
-    role: "Student Representative - SAC (PwD)",
-    image: "/brand/team/sashank-sabat.png",
-  },
-  {
     name: "Monu Kumar",
     role: "Sr. Office Assistant",
     image: "/brand/team/monu-kumar.png",
