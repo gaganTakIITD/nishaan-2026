@@ -95,13 +95,6 @@ export const showcaseGallery = [
     caption: "Energy",
     span: "normal" as const,
   },
-  {
-    id: "show-08",
-    src: "/media/showcase/show-08.jpg",
-    alt: "Tea break gathering during NISHAAN — community and belonging",
-    caption: "Belonging",
-    span: "normal" as const,
-  },
 ] as const;
 
 /** Event category cover images for richer cards */

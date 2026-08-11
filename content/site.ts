@@ -148,7 +148,7 @@ export const media = {
     },
   ],
   chapter: {
-    about: "/media/showcase/show-08.jpg",
+    about: "/media/past/2025-01.jpg",
     events: "/media/past/2024-01.jpg",
     vision: "/media/past/2025-01.jpg",
   },
