@@ -50,6 +50,27 @@ export default function ContactPage() {
 
             <div className="group imprint-tile p-6 sm:p-7">
               <h2 className="font-display text-xl font-semibold tracking-tight text-oae-text transition-colors duration-300 group-hover:text-oae-primary">
+                {contacts.deanOdi.name}
+              </h2>
+              <p className="mt-1 text-sm font-semibold text-oae-primary">
+                {contacts.deanOdi.role}
+              </p>
+              <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-oae-muted">
+                <li>
+                  <a href={`tel:${contacts.deanOdi.phone.replace(/\s/g, "")}`}>
+                    {contacts.deanOdi.phone}
+                  </a>
+                </li>
+                <li>
+                  <a href={`mailto:${contacts.deanOdi.email}`}>
+                    {contacts.deanOdi.email}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="group imprint-tile p-6 sm:p-7">
+              <h2 className="font-display text-xl font-semibold tracking-tight text-oae-text transition-colors duration-300 group-hover:text-oae-primary">
                 {contacts.facultyAdvisor.name}
               </h2>
               <p className="mt-1 text-sm font-semibold text-oae-primary">
@@ -74,20 +95,23 @@ export default function ContactPage() {
 
             <div className="group imprint-tile p-6 sm:p-7">
               <h2 className="font-display text-xl font-semibold tracking-tight text-oae-text transition-colors duration-300 group-hover:text-oae-primary">
-                {contacts.deanOdi.name}
+                {contacts.facultyAdvisorIi.name}
               </h2>
               <p className="mt-1 text-sm font-semibold text-oae-primary">
-                {contacts.deanOdi.role}
+                {contacts.facultyAdvisorIi.role}
               </p>
               <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-oae-muted">
+                <li>{contacts.facultyAdvisorIi.department}</li>
                 <li>
-                  <a href={`tel:${contacts.deanOdi.phone.replace(/\s/g, "")}`}>
-                    {contacts.deanOdi.phone}
+                  <a
+                    href={`tel:${contacts.facultyAdvisorIi.phone.replace(/\s/g, "")}`}
+                  >
+                    {contacts.facultyAdvisorIi.phone}
                   </a>
                 </li>
                 <li>
-                  <a href={`mailto:${contacts.deanOdi.email}`}>
-                    {contacts.deanOdi.email}
+                  <a href={`mailto:${contacts.facultyAdvisorIi.email}`}>
+                    {contacts.facultyAdvisorIi.email}
                   </a>
                 </li>
               </ul>

@@ -84,38 +84,41 @@ export const contacts = {
     office: "LH 124, Ground Floor, Lecture Hall Complex (LHC), IIT Delhi",
   },
   facultyAdvisor: {
-    name: "Prof. Vikram Singh",
-    role: "Faculty Advisor / Faculty In-charge (PwBD)",
-    department: "Chemical Engineering, IIT Delhi",
+    name: "Prof. Sujin Babu",
+    role: "Faculty Advisor, OAE-I",
+    department: "Physics · Office of Accessible Education, IIT Delhi",
     phone: "+91 11 2659 1030",
-    email: "vs225@chemical.iitd.ac.in",
+    email: "advisoroae@admin.iitd.ac.in",
+  },
+  facultyAdvisorIi: {
+    name: "Prof. Gourab Kar",
+    role: "Faculty Advisor, OAE-II",
+    department: "Office of Accessible Education, IIT Delhi",
+    phone: "+91 11 2659 8597",
+    email: "advisoroae@admin.iitd.ac.in",
   },
   deanOdi: {
-    name: "Prof. Angelie Multani",
+    name: "Prof. Deepak Kumar",
     role: "Dean, Diversity & Inclusion",
-    phone: "+91 11 2654 8798",
+    phone: "+91 11 2659 8798",
     email: "dean_odi@admin.iitd.ac.in",
   },
 } as const;
 
+/** NISHAAN was not held in 2023 — first edition was 2024 */
 export const history = [
   {
     edition: 1,
-    year: 2023,
-    notes: "First organised — a new imprint on campus culture",
+    year: 2024,
+    notes: "First organised — recognition with cash prizes and certificates",
   },
   {
     edition: 2,
-    year: 2024,
-    notes: "Recognition with cash prizes and certificates",
-  },
-  {
-    edition: 3,
     year: 2025,
     notes: "Inter-college participation from colleges across Delhi",
   },
   {
-    edition: 4,
+    edition: 3,
     year: 2026,
     notes: "The mark continues — programme details forthcoming",
   },
@@ -145,7 +148,7 @@ export const media = {
     },
   ],
   chapter: {
-    about: "/media/past/about-side.jpg",
+    about: "/media/showcase/show-08.jpg",
     events: "/media/past/2024-01.jpg",
     vision: "/media/past/2025-01.jpg",
   },

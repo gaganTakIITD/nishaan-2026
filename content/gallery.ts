@@ -1,24 +1,25 @@
+/** Past editions — NISHAAN was not held in 2023; first edition was 2024 */
 export const pastGallery = [
   {
     id: "2025-1",
     year: 2025,
     src: "/media/past/2025-01.jpg",
     alt: "Performers on stage during NISHAAN at IIT Delhi",
-    caption: "On stage",
+    caption: "On Stage",
   },
   {
     id: "2025-2",
     year: 2025,
     src: "/media/past/2025-02.jpg",
     alt: "Students celebrating during NISHAAN at IIT Delhi",
-    caption: "In the hall",
+    caption: "In the Hall",
   },
   {
     id: "2024-1",
     year: 2024,
     src: "/media/past/2024-01.jpg",
     alt: "Cultural performance at NISHAAN 2024",
-    caption: "Cultural showcase",
+    caption: "Cultural Showcase",
   },
   {
     id: "2024-2",
@@ -28,18 +29,18 @@ export const pastGallery = [
     caption: "Participants",
   },
   {
-    id: "2023-1",
-    year: 2023,
-    src: "/media/past/2023-01.jpg",
-    alt: "Moments from the first edition of NISHAAN 2023",
-    caption: "First edition",
+    id: "2024-3",
+    year: 2024,
+    src: "/media/past/2024-03.jpg",
+    alt: "Welcome session at the first NISHAAN edition in 2024",
+    caption: "Welcome",
   },
   {
-    id: "2023-2",
-    year: 2023,
-    src: "/media/past/2023-02.jpg",
-    alt: "Community gathering at NISHAAN 2023",
-    caption: "Community",
+    id: "2024-4",
+    year: 2024,
+    src: "/media/showcase/show-08.jpg",
+    alt: "Tea break gathering during NISHAAN — community and belonging",
+    caption: "Belonging",
   },
 ] as const;
 
@@ -49,14 +50,14 @@ export const showcaseGallery = [
     id: "show-01",
     src: "/media/showcase/show-01.jpg",
     alt: "Inclusive performance moment at NISHAAN",
-    caption: "Shared stage",
+    caption: "Shared Stage",
     span: "wide" as const,
   },
   {
     id: "show-02",
     src: "/media/showcase/show-02.jpg",
     alt: "Audience and performers at NISHAAN",
-    caption: "In the room",
+    caption: "In the Room",
     span: "normal" as const,
   },
   {
@@ -97,7 +98,7 @@ export const showcaseGallery = [
   {
     id: "show-08",
     src: "/media/showcase/show-08.jpg",
-    alt: "Community celebration at NISHAAN",
+    alt: "Tea break gathering during NISHAAN — community and belonging",
     caption: "Belonging",
     span: "normal" as const,
   },

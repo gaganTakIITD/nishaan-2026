@@ -1,13 +1,34 @@
+/** Current OAE / ODI leadership — from oae.iitd.ac.in & odi.iitd.ac.in/ourTeam */
 export const facultyTeam = [
   {
-    name: "Prof. Angelie Multani",
+    name: "Prof. Deepak Kumar",
     role: "Dean, Diversity & Inclusion",
     note: "Office of Diversity & Inclusion, IIT Delhi",
   },
   {
-    name: "Prof. Vikram Singh",
-    role: "Faculty Advisor / Faculty In-charge (PwBD)",
-    note: "Chemical Engineering · Office of Accessible Education",
+    name: "Prof. Sujin Babu",
+    role: "Faculty Advisor, OAE-I",
+    note: "Physics · Office of Accessible Education",
+  },
+  {
+    name: "Prof. Gourab Kar",
+    role: "Faculty Advisor, OAE-II",
+    note: "Office of Accessible Education",
+  },
+] as const;
+
+export const oaeStaff = [
+  {
+    name: "Anoushka Augustine",
+    role: "Consultant, OAE",
+  },
+  {
+    name: "Sashank Sekhar Sabat",
+    role: "Student Representative — SAC (PwD)",
+  },
+  {
+    name: "Monu Kumar",
+    role: "Senior Office Assistant",
   },
 ] as const;
 
