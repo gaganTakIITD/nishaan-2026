@@ -54,8 +54,8 @@ export function HomeSections() {
             <div className="imprint-tile overflow-hidden">
               <div className="relative aspect-[16/11] bg-fest-field">
                 <Image
-                  src="/media/past/about-side.jpg"
-                  alt="Recognition moment at NISHAAN — a student receives a certificate on stage"
+                  src="/media/showcase/show-08.jpg"
+                  alt="Tea break gathering during NISHAAN — community and belonging"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 40vw"
