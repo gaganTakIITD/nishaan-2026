@@ -128,28 +128,28 @@ export const history = [
 export const media = {
   hero: {
     src: "/media/hero/stage.jpg",
-    alt: "Inclusive stage performance at NISHAAN — dancers and performers together",
+    alt: "Inclusive dance performance at NISHAAN — artists on stage together",
   },
   past: [
     {
       src: "/media/past/2025-01.jpg",
-      alt: "Performers on stage during NISHAAN",
-      caption: "On stage",
+      alt: "Inclusive stage dance at NISHAAN 2025",
+      caption: "On Stage",
     },
     {
       src: "/media/past/2025-02.jpg",
-      alt: "Students celebrating during NISHAAN",
-      caption: "In the room",
+      alt: "Dance formation with wheelchair artists at NISHAAN",
+      caption: "We Are One",
     },
     {
       src: "/media/past/2024-01.jpg",
-      alt: "Cultural showcase at NISHAAN",
-      caption: "In the frame",
+      alt: "Student speaking at NISHAAN 2024",
+      caption: "Opening Words",
     },
   ],
   chapter: {
-    about: "/media/past/2025-01.jpg",
-    events: "/media/past/2024-01.jpg",
-    vision: "/media/past/2025-01.jpg",
+    about: "/media/showcase/about-fest.jpg",
+    events: "/media/showcase/show-02.jpg",
+    vision: "/media/showcase/show-01.jpg",
   },
 } as const;
