@@ -51,25 +51,14 @@ export function HomeSections() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <div className="imprint-tile overflow-hidden">
-              <div className="relative aspect-[16/11] bg-fest-field">
-                <Image
-                  src="/media/showcase/show-08.jpg"
-                  alt="Tea break gathering during NISHAAN — community and belonging"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                />
-              </div>
-              <div className="border-t border-fest-rule px-5 py-4">
-                <p className="font-display text-xl font-semibold text-fest-ink">
-                  {site.name}{" "}
-                  <span lang="hi" className="text-fest-warm">
-                    {site.nameHi}
-                  </span>
-                </p>
-                <p className="mt-1 text-sm text-fest-muted">{site.editionLabel}</p>
-              </div>
+            <div className="imprint-tile flex h-full min-h-[12rem] flex-col justify-end px-6 py-7 sm:px-8 sm:py-8">
+              <p className="font-display text-3xl font-semibold tracking-tight text-fest-ink sm:text-4xl">
+                {site.name}{" "}
+                <span lang="hi" className="text-fest-warm">
+                  {site.nameHi}
+                </span>
+              </p>
+              <p className="mt-2 text-sm text-fest-muted">{site.editionLabel}</p>
             </div>
           </div>
         </div>
