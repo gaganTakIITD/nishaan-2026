@@ -85,14 +85,14 @@ export const contacts = {
   },
   facultyAdvisor: {
     name: "Prof. Sujin Babu",
-    role: "Faculty Advisor, OAE-I",
+    role: "Faculty Advisor",
     department: "Physics · Office of Accessible Education, IIT Delhi",
     phone: "+91 11 2659 1030",
     email: "advisoroae@admin.iitd.ac.in",
   },
   facultyAdvisorIi: {
     name: "Prof. Gourab Kar",
-    role: "Faculty Advisor, OAE-II",
+    role: "Faculty Advisor",
     department: "Office of Accessible Education, IIT Delhi",
     phone: "+91 11 2659 8597",
     email: "advisoroae@admin.iitd.ac.in",
