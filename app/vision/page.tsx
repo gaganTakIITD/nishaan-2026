@@ -46,7 +46,7 @@ export default function VisionPage() {
             Delhi, we are committed to providing an inclusive environment…”
           </p>
           <footer className="mt-6 text-sm leading-relaxed text-oae-muted">
-            — Prof. Vikram Singh, Faculty Advisor / Faculty In-charge (PwBD)
+            — Office of Accessible Education, IIT Delhi
           </footer>
         </blockquote>
 

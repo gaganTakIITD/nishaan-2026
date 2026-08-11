@@ -1,15 +1,42 @@
-export const facultyTeam = [
+/** Official OAE team — matches oae.iitd.ac.in Our Team */
+export const oaeTeam = [
   {
-    name: "Prof. Angelie Multani",
+    name: "Prof. Deepak Kumar",
     role: "Dean, Diversity & Inclusion",
-    note: "Office of Diversity & Inclusion, IIT Delhi",
+    image: "/brand/team/deepak-kumar.png",
   },
   {
-    name: "Prof. Vikram Singh",
-    role: "Faculty Advisor / Faculty In-charge (PwBD)",
-    note: "Chemical Engineering · Office of Accessible Education",
+    name: "Prof. Sujin Babu",
+    role: "Faculty Advisor",
+    image: "/brand/team/sujin-babu.png",
+  },
+  {
+    name: "Prof. Gourab Kar",
+    role: "Faculty Advisor",
+    image: "/brand/team/gourab-kar.png",
+  },
+  {
+    name: "Anoushka Augustine",
+    role: "Consultant, OAE",
+    image: "/brand/team/anoushka-augustine.png",
+  },
+  {
+    name: "Sashank Sekhar Sabat",
+    role: "Student Representative - SAC (PwD)",
+    image: "/brand/team/sashank-sabat.png",
+  },
+  {
+    name: "Monu Kumar",
+    role: "Sr. Office Assistant",
+    image: "/brand/team/monu-kumar.png",
   },
 ] as const;
+
+/** @deprecated use oaeTeam */
+export const facultyTeam = oaeTeam.slice(0, 3);
+
+/** @deprecated use oaeTeam */
+export const oaeStaff = oaeTeam.slice(3);
 
 export const studentTeamPlaceholders = [
   { name: "Student Coordinator", role: "Overall coordination — TBD" },

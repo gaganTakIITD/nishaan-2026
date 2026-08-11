@@ -7,7 +7,7 @@ import { history, media, site } from "@/content/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "What NISHAAN is, its history from 2023 to 2026, and the Office of Accessible Education.",
+    "What NISHAAN is, its history from 2024 to 2026, and the Office of Accessible Education.",
 };
 
 export default function AboutPage() {
