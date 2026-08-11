@@ -35,13 +35,6 @@ export const pastGallery = [
     alt: "Welcome session at the first NISHAAN edition in 2024",
     caption: "Welcome",
   },
-  {
-    id: "2024-4",
-    year: 2024,
-    src: "/media/showcase/show-08.jpg",
-    alt: "Tea break gathering during NISHAAN — community and belonging",
-    caption: "Belonging",
-  },
 ] as const;
 
 /** Featured editorial showcase — richer home/about storytelling */
