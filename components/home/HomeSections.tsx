@@ -17,6 +17,13 @@ export function HomeSections() {
       <section className="w-full bg-white py-12 md:py-16 lg:py-20">
         <div className="shell grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-12">
           <div className="lg:col-span-7">
+            <Image
+              src="/brand/nishaan-logo.svg"
+              alt="NISHAAN IIT Delhi — Celebrating Abilities. Inspiring Inclusion."
+              width={200}
+              height={226}
+              className="mb-6 h-28 w-auto object-contain sm:h-32"
+            />
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-fest-warm">
               About the Fest
             </p>

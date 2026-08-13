@@ -8,13 +8,15 @@ export function Footer() {
       <div className="shell grid gap-10 py-12 md:grid-cols-3 md:gap-10 lg:py-16">
         <div>
           <div className="flex flex-wrap items-end gap-4">
-            <Image
-              src="/brand/nishaan-mark.svg"
-              alt=""
-              width={56}
-              height={56}
-              className="h-14 w-14 rounded-full bg-white/10"
-            />
+            <div className="rounded-2xl bg-white px-3 py-2">
+              <Image
+                src="/brand/nishaan-logo.svg"
+                alt="NISHAAN IIT Delhi — Celebrating Abilities. Inspiring Inclusion."
+                width={168}
+                height={190}
+                className="h-[7.25rem] w-auto object-contain"
+              />
+            </div>
             <div>
               <p className="font-display text-3xl font-semibold tracking-tight text-balance">
                 {site.name}

@@ -37,6 +37,14 @@ export function Hero() {
     >
       <div className="shell relative grid items-stretch gap-6 py-8 sm:gap-8 sm:py-12 lg:grid-cols-12 lg:gap-10 lg:py-14">
         <div className="flex min-w-0 flex-col justify-center lg:col-span-5">
+          <Image
+            src="/brand/nishaan-mark.svg"
+            alt=""
+            width={72}
+            height={64}
+            className="mb-4 h-14 w-auto object-contain sm:mb-5 sm:h-16"
+            priority
+          />
           <div className="inline-flex w-fit max-w-full items-center gap-2 rounded-full border border-fest-rule bg-white px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-oae-primary sm:px-3 sm:text-xs sm:tracking-[0.14em]">
             <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-oae-primary" aria-hidden="true" />
             <span className="truncate">{site.year} edition · Inclusive fest</span>

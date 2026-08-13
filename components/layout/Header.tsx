@@ -71,9 +71,9 @@ export function Header() {
               <Image
                 src="/brand/nishaan-mark.svg"
                 alt=""
-                width={52}
-                height={52}
-                className="h-11 w-11 shrink-0 rounded-full shadow-sm transition-transform duration-300 group-hover:scale-105 sm:h-12 sm:w-12 lg:h-14 lg:w-14"
+                width={64}
+                height={56}
+                className="h-11 w-auto shrink-0 object-contain transition-transform duration-300 group-hover:scale-105 sm:h-12 lg:h-14"
                 priority
               />
               <span className="flex min-w-0 flex-col leading-tight">
